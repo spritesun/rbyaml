@@ -1,0 +1,3021 @@
+? cvs_history
+
+RCS file: /var/cvs/rbyaml/rbyaml/.cvsignore,v
+Working file: .cvsignore
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.2
+	RELEASE_0_1_0: 1.2
+	RELEASE_0_0_2: 1.1
+	RELEASE_0_0_1: 1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +1 -0
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.1
+date: 2006/05/09 18:27:15;  author: olabini;  state: Exp;
+Added cvsignore and fixed some homepage stuff
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/LICENSE,v
+Working file: LICENSE
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:08;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:08;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/README,v
+Working file: README
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.2
+	RELEASE_0_1_0: 1.2
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +1 -1
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:08;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:08;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/rbyaml.gemspec,v
+Working file: rbyaml.gemspec
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.5
+	RELEASE_0_1_0: 1.4
+	RELEASE_0_0_2: 1.3
+	RELEASE_0_0_1: 1.2
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.5
+date: 2006/06/11 15:14:01;  author: olabini;  state: Exp;  lines: +1 -1
+Updated to say version 0.2
+----------------------------
+revision 1.4
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +1 -1
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.3
+date: 2006/05/20 03:50:05;  author: olabini;  state: Exp;  lines: +1 -1
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.2
+date: 2006/05/09 18:09:41;  author: olabini;  state: Exp;  lines: +1 -1
+Change homepage address
+----------------------------
+revision 1.1
+date: 2006/05/09 18:06:05;  author: olabini;  state: Exp;
+Added gemspec
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/homepage/index.html,v
+Working file: homepage/index.html
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.2
+	RELEASE_0_1_0: 1.2
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.2
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2006/05/09 18:27:15;  author: olabini;  state: Exp;  lines: +2 -2
+Added cvsignore and fixed some homepage stuff
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:08;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:08;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/homepage/img/itdoc.jpg,v
+Working file: homepage/img/itdoc.jpg
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: b
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:09;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:09;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/homepage/img/itforum.jpg,v
+Working file: homepage/img/itforum.jpg
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: b
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:12;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:12;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/homepage/img/logo1.jpg,v
+Working file: homepage/img/logo1.jpg
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: b
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:13;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:13;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/homepage/img/suhf.jpg,v
+Working file: homepage/img/suhf.jpg
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: b
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:16;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:16;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/homepage/style/main.css,v
+Working file: homepage/style/main.css
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.2
+	RELEASE_0_1_0: 1.2
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.2
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2006/05/09 18:27:15;  author: olabini;  state: Exp;  lines: +1 -1
+Added cvsignore and fixed some homepage stuff
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:16;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:16;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml.rb,v
+Working file: lib/rbyaml.rb
+head: 1.4
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.3
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.4
+date: 2006/09/23 21:51:19;  author: olabini;  state: Exp;  lines: +136 -136
+Fixed a few small bugs
+----------------------------
+revision 1.3
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +9 -256
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.2
+date: 2006/06/07 09:21:03;  author: olabini;  state: Exp;  lines: +5 -0
+Added functionality to change the constructor dynamically
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:16;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:16;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/composer.rb,v
+Working file: lib/rbyaml/composer.rb
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.4
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 6;	selected revisions: 6
+description:
+----------------------------
+revision 1.5
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +110 -110
+Fixed a few small bugs
+----------------------------
+revision 1.4
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +9 -11
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +28 -25
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:05;  author: olabini;  state: Exp;  lines: +33 -113
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:16;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:16;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/constants.rb,v
+Working file: lib/rbyaml/constants.rb
+head: 1.4
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 4;	selected revisions: 4
+description:
+----------------------------
+revision 1.4
+date: 2006/11/25 13:58:32;  author: olabini;  state: Exp;  lines: +1 -1
+And another one.
+----------------------------
+revision 1.3
+date: 2006/11/25 13:58:09;  author: olabini;  state: Exp;  lines: +1 -1
+Fix a probable regexp bug.
+----------------------------
+revision 1.2
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +1 -1
+Fixed a few small bugs
+----------------------------
+revision 1.1
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;
+Rewritten interface to representer. Bugfixes and more Syck compat
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/constructor.rb,v
+Working file: lib/rbyaml/constructor.rb
+head: 1.12
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.11
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 13;	selected revisions: 13
+description:
+----------------------------
+revision 1.12
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +482 -482
+Fixed a few small bugs
+----------------------------
+revision 1.11
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +120 -59
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.10
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +15 -17
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.9
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;  lines: +8 -2
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+----------------------------
+revision 1.8
+date: 2006/06/07 10:05:03;  author: olabini;  state: Exp;  lines: +16 -4
+Handles recursive structures
+----------------------------
+revision 1.7
+date: 2006/06/07 09:21:03;  author: olabini;  state: Exp;  lines: +6 -6
+Added functionality to change the constructor dynamically
+----------------------------
+revision 1.6
+date: 2006/06/06 18:57:45;  author: olabini;  state: Exp;  lines: +13 -8
+Some smaller fixes, some bigger fixes
+----------------------------
+revision 1.5
+date: 2006/05/28 12:59:51;  author: olabini;  state: Exp;  lines: +2 -1
+Fix for a small error when loading stuff
+----------------------------
+revision 1.4
+date: 2006/05/27 17:10:14;  author: olabini;  state: Exp;  lines: +10 -2
+Added PrivateType (but not using it right now), and fixed the timestamp to return a simple scalar if the regexp doesn't match
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +94 -84
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:05;  author: olabini;  state: Exp;  lines: +8 -1
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:17;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:17;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/Attic/detector.rb,v
+Working file: lib/rbyaml/detector.rb
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:05;  author: olabini;  state: dead;  lines: +0 -0
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:17;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:17;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/dumper.rb,v
+Working file: lib/rbyaml/dumper.rb
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.4
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 6;	selected revisions: 6
+description:
+----------------------------
+revision 1.5
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +39 -39
+Fixed a few small bugs
+----------------------------
+revision 1.4
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +12 -9
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +10 -17
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +15 -12
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:17;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:17;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/emitter.rb,v
+Working file: lib/rbyaml/emitter.rb
+head: 1.8
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.7
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 9;	selected revisions: 9
+description:
+----------------------------
+revision 1.8
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +1089 -1089
+Fixed a few small bugs
+----------------------------
+revision 1.7
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +5 -21
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.6
+date: 2006/06/10 11:20:44;  author: olabini;  state: Exp;  lines: +4 -0
+Fixed some errors in the emitter
+----------------------------
+revision 1.5
+date: 2006/06/06 18:57:45;  author: olabini;  state: Exp;  lines: +0 -2
+Some smaller fixes, some bigger fixes
+----------------------------
+revision 1.4
+date: 2006/05/28 18:23:15;  author: olabini;  state: Exp;  lines: +5 -5
+Fixes for a few issues with explicit start and emitting empty entities and timestamps
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +13 -26
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +12 -12
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:18;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:18;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/error.rb,v
+Working file: lib/rbyaml/error.rb
+head: 1.4
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.3
+	RELEASE_0_1_0: 1.2
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.4
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +22 -22
+Fixed a few small bugs
+----------------------------
+revision 1.3
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +4 -57
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.2
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +15 -21
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/events.rb,v
+Working file: lib/rbyaml/events.rb
+head: 1.6
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.5
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 7;	selected revisions: 7
+description:
+----------------------------
+revision 1.6
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +111 -111
+Fixed a few small bugs
+----------------------------
+revision 1.5
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +8 -13
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.4
+date: 2006/05/27 17:10:14;  author: olabini;  state: Exp;  lines: +0 -1
+Added PrivateType (but not using it right now), and fixed the timestamp to return a simple scalar if the regexp doesn't match
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +29 -5
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +4 -3
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/loader.rb,v
+Working file: lib/rbyaml/loader.rb
+head: 1.4
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.3
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.4
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +40 -40
+Fixed a few small bugs
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +11 -23
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +8 -5
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/nodes.rb,v
+Working file: lib/rbyaml/nodes.rb
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.4
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 6;	selected revisions: 6
+description:
+----------------------------
+revision 1.5
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +56 -56
+Fixed a few small bugs
+----------------------------
+revision 1.4
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +5 -5
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +13 -9
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +1 -18
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/parser.rb,v
+Working file: lib/rbyaml/parser.rb
+head: 1.6
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.5
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 7;	selected revisions: 7
+description:
+----------------------------
+revision 1.6
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +594 -594
+Fixed a few small bugs
+----------------------------
+revision 1.5
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +64 -102
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.4
+date: 2006/06/04 23:01:13;  author: olabini;  state: Exp;  lines: +8 -8
+Some small fixes
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +482 -344
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +16 -10
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/reader.rb,v
+Working file: lib/rbyaml/reader.rb
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +127 -127
+Fixed a few small bugs
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:19;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/representer.rb,v
+Working file: lib/rbyaml/representer.rb
+head: 1.8
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.7
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 9;	selected revisions: 9
+description:
+----------------------------
+revision 1.8
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +110 -110
+Fixed a few small bugs
+----------------------------
+revision 1.7
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +16 -179
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.6
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +3 -3
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.5
+date: 2006/06/06 18:57:45;  author: olabini;  state: Exp;  lines: +14 -2
+Some smaller fixes, some bigger fixes
+----------------------------
+revision 1.4
+date: 2006/05/28 18:23:15;  author: olabini;  state: Exp;  lines: +22 -9
+Fixes for a few issues with explicit start and emitting empty entities and timestamps
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +26 -17
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +75 -19
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:20;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:20;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/resolver.rb,v
+Working file: lib/rbyaml/resolver.rb
+head: 1.7
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.7
+	RELEASE_0_1_0: 1.2
+	RELEASE_0_0_2: 1.1
+keyword substitution: kv
+total revisions: 7;	selected revisions: 7
+description:
+----------------------------
+revision 1.7
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +1 -1
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.6
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +1 -1
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.5
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;  lines: +2 -2
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+----------------------------
+revision 1.4
+date: 2006/06/06 18:57:45;  author: olabini;  state: Exp;  lines: +1 -1
+Some smaller fixes, some bigger fixes
+----------------------------
+revision 1.3
+date: 2006/06/04 23:01:13;  author: olabini;  state: Exp;  lines: +1 -1
+Some small fixes
+----------------------------
+revision 1.2
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +15 -15
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.1
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;
+Updated to current PyYAML code, fixed alot of errors, added testing
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/rubytypes.rb,v
+Working file: lib/rbyaml/rubytypes.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;
+Rewritten interface to representer. Bugfixes and more Syck compat
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/scanner.rb,v
+Working file: lib/rbyaml/scanner.rb
+head: 1.8
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.7
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 9;	selected revisions: 9
+description:
+----------------------------
+revision 1.8
+date: 2006/09/23 21:51:20;  author: olabini;  state: Exp;  lines: +2 -2
+Fixed a few small bugs
+----------------------------
+revision 1.7
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +4 -56
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.6
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +103 -150
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.5
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;  lines: +5 -1
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+----------------------------
+revision 1.4
+date: 2006/06/02 22:29:30;  author: olabini;  state: Exp;  lines: +17 -24
+Some small fixes
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +458 -367
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +11 -10
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:22;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:22;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/serializer.rb,v
+Working file: lib/rbyaml/serializer.rb
+head: 1.7
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.6
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 8;	selected revisions: 8
+description:
+----------------------------
+revision 1.7
+date: 2006/09/23 21:51:21;  author: olabini;  state: Exp;  lines: +117 -117
+Fixed a few small bugs
+----------------------------
+revision 1.6
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +8 -8
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.5
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +3 -3
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.4
+date: 2006/05/28 18:23:15;  author: olabini;  state: Exp;  lines: +2 -2
+Fixes for a few issues with explicit start and emitting empty entities and timestamps
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +19 -17
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +18 -23
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:22;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:22;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/stream.rb,v
+Working file: lib/rbyaml/stream.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;
+Rewritten interface to representer. Bugfixes and more Syck compat
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/tag.rb,v
+Working file: lib/rbyaml/tag.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;
+Rewritten interface to representer. Bugfixes and more Syck compat
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/test.rb,v
+Working file: lib/rbyaml/test.rb
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2006/09/23 21:51:21;  author: olabini;  state: Exp;  lines: +56 -56
+Fixed a few small bugs
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:22;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:22;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/tokens.rb,v
+Working file: lib/rbyaml/tokens.rb
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.4
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 6;	selected revisions: 6
+description:
+----------------------------
+revision 1.5
+date: 2006/09/23 21:51:21;  author: olabini;  state: Exp;  lines: +210 -210
+Fixed a few small bugs
+----------------------------
+revision 1.4
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +22 -16
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +44 -4
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +4 -3
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:22;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:22;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/types.rb,v
+Working file: lib/rbyaml/types.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;
+Rewritten interface to representer. Bugfixes and more Syck compat
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/util.rb,v
+Working file: lib/rbyaml/util.rb
+head: 1.4
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.4
+	RELEASE_0_1_0: 1.1
+keyword substitution: kv
+total revisions: 4;	selected revisions: 4
+description:
+----------------------------
+revision 1.4
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +0 -10
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.3
+date: 2006/06/06 18:57:45;  author: olabini;  state: Exp;  lines: +3 -3
+Some smaller fixes, some bigger fixes
+----------------------------
+revision 1.2
+date: 2006/05/27 17:10:14;  author: olabini;  state: Exp;  lines: +10 -0
+Added PrivateType (but not using it right now), and fixed the timestamp to return a simple scalar if the regexp doesn't match
+----------------------------
+revision 1.1
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/lib/rbyaml/yaml.rb,v
+Working file: lib/rbyaml/yaml.rb
+head: 1.7
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.6
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 8;	selected revisions: 8
+description:
+----------------------------
+revision 1.7
+date: 2006/09/23 21:51:21;  author: olabini;  state: Exp;  lines: +126 -126
+Fixed a few small bugs
+----------------------------
+revision 1.6
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +22 -32
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.5
+date: 2006/06/07 09:21:03;  author: olabini;  state: Exp;  lines: +1 -1
+Added functionality to change the constructor dynamically
+----------------------------
+revision 1.4
+date: 2006/05/28 18:23:15;  author: olabini;  state: Exp;  lines: +4 -4
+Fixes for a few issues with explicit start and emitting empty entities and timestamps
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +12 -12
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +20 -27
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/test_add_ctor.rb,v
+Working file: test/test_add_ctor.rb
+head: 1.3
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.3
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.3
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;  lines: +11 -2
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+----------------------------
+revision 1.2
+date: 2006/06/07 10:05:03;  author: olabini;  state: Exp;  lines: +13 -1
+Handles recursive structures
+----------------------------
+revision 1.1
+date: 2006/06/07 09:21:03;  author: olabini;  state: Exp;
+Added functionality to change the constructor dynamically
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/test_bm.rb,v
+Working file: test/test_bm.rb
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.2
+	RELEASE_0_1_0: 1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 2006/06/10 12:33:08;  author: olabini;  state: Exp;  lines: +2 -2
+Removed the marks, making the code clearer and much faster
+----------------------------
+revision 1.1
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/test_bm_syck.rb,v
+Working file: test/test_bm_syck.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+	RELEASE_0_1_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/test_invoke.rb,v
+Working file: test/test_invoke.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+	RELEASE_0_1_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/test_one.rb,v
+Working file: test/test_one.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+	RELEASE_0_1_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/test_profile.rb,v
+Working file: test/test_profile.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+	RELEASE_0_1_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/test_rbyaml.rb,v
+Working file: test/test_rbyaml.rb
+head: 1.7
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.7
+	RELEASE_0_1_0: 1.3
+	RELEASE_0_0_2: 1.2
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 8;	selected revisions: 8
+description:
+----------------------------
+revision 1.7
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +4 -0
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.6
+date: 2006/06/10 11:20:44;  author: olabini;  state: Exp;  lines: +13 -1
+Fixed some errors in the emitter
+----------------------------
+revision 1.5
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;  lines: +13 -6
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+----------------------------
+revision 1.4
+date: 2006/05/28 18:23:15;  author: olabini;  state: Exp;  lines: +11 -3
+Fixes for a few issues with explicit start and emitting empty entities and timestamps
+----------------------------
+revision 1.3
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +2 -1
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.2
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;  lines: +14 -1
+Updated to current PyYAML code, fixed alot of errors, added testing
+----------------------------
+revision 1.1
+date: 2006/05/09 15:59:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 15:59:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/test_time.rb,v
+Working file: test/test_time.rb
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.2
+	RELEASE_0_1_0: 1.2
+	RELEASE_0_0_2: 1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;  lines: +13 -8
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+----------------------------
+revision 1.1
+date: 2006/05/20 03:50:06;  author: olabini;  state: Exp;
+Updated to current PyYAML code, fixed alot of errors, added testing
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yamlx.rb,v
+Working file: test/yamlx.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+	RELEASE_0_1_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/05/27 13:08:54;  author: olabini;  state: Exp;
+Refactoring to classes, rubyfying, rewritten parser and major performance fixes.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/gems.yml,v
+Working file: test/yaml/gems.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/gems2.yml,v
+Working file: test/yaml/gems2.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test1.rb,v
+Working file: test/yaml/test1.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test1.yml,v
+Working file: test/yaml/test1.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test10.rb,v
+Working file: test/yaml/test10.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test10.yml,v
+Working file: test/yaml/test10.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test11.rb,v
+Working file: test/yaml/test11.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test12.rb,v
+Working file: test/yaml/test12.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test12.yml,v
+Working file: test/yaml/test12.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test13.rb,v
+Working file: test/yaml/test13.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test13.yml,v
+Working file: test/yaml/test13.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test14.rb,v
+Working file: test/yaml/test14.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test14.yml,v
+Working file: test/yaml/test14.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test15.rb,v
+Working file: test/yaml/test15.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test15.yml,v
+Working file: test/yaml/test15.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test16.rb,v
+Working file: test/yaml/test16.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test16.yml,v
+Working file: test/yaml/test16.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test17.rb,v
+Working file: test/yaml/test17.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test18.rb,v
+Working file: test/yaml/test18.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test18.yml,v
+Working file: test/yaml/test18.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test19.rb,v
+Working file: test/yaml/test19.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test19.yml,v
+Working file: test/yaml/test19.yml
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.2
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2006/06/06 18:57:45;  author: olabini;  state: Exp;  lines: +1 -1
+Some smaller fixes, some bigger fixes
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test2.rb,v
+Working file: test/yaml/test2.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test2.yml,v
+Working file: test/yaml/test2.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test20.rb,v
+Working file: test/yaml/test20.rb
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.2
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 2006/06/11 15:11:47;  author: olabini;  state: Exp;  lines: +2 -0
+Rewritten interface to representer. Bugfixes and more Syck compat
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test20.yml,v
+Working file: test/yaml/test20.yml
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.2
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.2
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;  lines: +1 -1
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test21.yml,v
+Working file: test/yaml/test21.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test22.yml,v
+Working file: test/yaml/test22.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test23.yml,v
+Working file: test/yaml/test23.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test24.yml,v
+Working file: test/yaml/test24.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test25.yml,v
+Working file: test/yaml/test25.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test26.yml,v
+Working file: test/yaml/test26.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test27.yml,v
+Working file: test/yaml/test27.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test28.yml,v
+Working file: test/yaml/test28.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test29.yml,v
+Working file: test/yaml/test29.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test3.rb,v
+Working file: test/yaml/test3.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test3.yml,v
+Working file: test/yaml/test3.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test30.yml,v
+Working file: test/yaml/test30.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test31.yml,v
+Working file: test/yaml/test31.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test32.yml,v
+Working file: test/yaml/test32.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test33.yml,v
+Working file: test/yaml/test33.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test34.yml,v
+Working file: test/yaml/test34.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test35.yml,v
+Working file: test/yaml/test35.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test36.yml,v
+Working file: test/yaml/test36.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test37.yml,v
+Working file: test/yaml/test37.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test38.yml,v
+Working file: test/yaml/test38.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test39.yml,v
+Working file: test/yaml/test39.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test4.rb,v
+Working file: test/yaml/test4.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test4.yml,v
+Working file: test/yaml/test4.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test40.yml,v
+Working file: test/yaml/test40.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test41.yml,v
+Working file: test/yaml/test41.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test42.yml,v
+Working file: test/yaml/test42.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test43.yml,v
+Working file: test/yaml/test43.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test44.yml,v
+Working file: test/yaml/test44.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test5.rb,v
+Working file: test/yaml/test5.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test5.yml,v
+Working file: test/yaml/test5.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test6.rb,v
+Working file: test/yaml/test6.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test6.yml,v
+Working file: test/yaml/test6.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test7.rb,v
+Working file: test/yaml/test7.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test7.yml,v
+Working file: test/yaml/test7.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test8.rb,v
+Working file: test/yaml/test8.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test8.yml,v
+Working file: test/yaml/test8.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test9.rb,v
+Working file: test/yaml/test9.rb
+head: 1.1
+branch:
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1
+date: 2006/06/10 10:44:52;  author: olabini;  state: Exp;
+Better testing, fixes for a few compatibility issues, removed 'y' and 'n' as boolean values.
+=============================================================================
+
+RCS file: /var/cvs/rbyaml/rbyaml/test/yaml/test9.yml,v
+Working file: test/yaml/test9.yml
+head: 1.1
+branch: 1.1.1
+locks: strict
+access list:
+symbolic names:
+	RELEASE_0_2_0: 1.1.1.1
+	RELEASE_0_1_0: 1.1.1.1
+	RELEASE_0_0_2: 1.1.1.1
+	RELEASE_0_0_1: 1.1.1.1
+	INITIAL: 1.1.1.1
+	REL_0: 1.1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2006/05/09 16:00:23;  author: olabini;  state: Exp;  lines: +0 -0
+Initial import
+=============================================================================
