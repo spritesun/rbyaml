@@ -3,6 +3,7 @@ $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 require 'rbyaml'
 require 'test/unit'
 require 'rubygems'
+require 'fileutils'
 
 class TestRbYAML < Test::Unit::TestCase
   def test_basic_load
@@ -27,7 +28,7 @@ class TestRbYAML < Test::Unit::TestCase
   end
 
   def test_load_gems2
-    RbYAML.load(File.read("yaml/gems2.yml"))
+    RbYAML.load(File.read(File.join(File.dirname(__FILE__), "yaml/gems2.yml")))
   end
 end
 
