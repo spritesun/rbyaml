@@ -90,8 +90,9 @@ module RbYAML
     #    @@loader.add_private_type( type_re, &transfer_proc )
   end
 
+  # SimpleDetector uninitialize, need resolver/loader
   def self.detect_implicit( val )
-    SimpleDetector.detect(val)
+    # SimpleDetector.detect(val)
   end
 
   # this operation does not make sense in RbYAML (right now)
