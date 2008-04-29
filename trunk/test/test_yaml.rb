@@ -1,4 +1,6 @@
-# From CRuby, test/yaml/test_yaml.rb, Replace YAML  -> RbYAML.
+$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
+
+# Ported from MRI, test/yaml/test_yaml.rb, replace YAML  -> RbYAML.
 
 require 'test/unit'
 require 'rubygems'
