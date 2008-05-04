@@ -1,6 +1,9 @@
-$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
+# Copyrighted free software by Yukihiro Matsumoto <matz@netlab.jp>.
+# Distributed under the GNU General Public License.
+# Modified by Long Sun <spritesun@gmail.com>.
 
-# Ported from MRI, test/yaml/test_yaml.rb, replace YAML  -> RbYAML.
+
+$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
 require 'test/unit'
 require 'rubygems'
