@@ -37,7 +37,7 @@ module RbYAML
   
   def self._load(stream, loader=Loader)
     l = loader.new(stream)
-    l.constructor.get_data if l.constructor.check_data
+    l.constructor.get_data
   end
 
   def self._safe_load_all(stream)
