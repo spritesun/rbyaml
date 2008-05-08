@@ -92,6 +92,7 @@ module RbYAML
     def peek_event
       parse_stream
       @current_event = parse_stream_next unless @current_event
+      # seems following statement is useless
       @current_event
     end
 
