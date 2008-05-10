@@ -133,7 +133,7 @@ module RbYAML
         end
         implicit = implicit[1]
       end
-      exact_paths = @resolver_exact_paths[-1]
+      exact_paths = @resolver_exact_paths[-1] || []
       return exact_paths[kind] if exact_paths.include?(kind) 
       return exact_paths[nil] if exact_paths.include?(nil)
       if ScalarNode == kind
@@ -159,5 +159,6 @@ module RbYAML
   # The following implicit resolver is only for documentation purposes. It cannot work
   # because plain scalars cannot start with '!', '&', or '*'.
   BaseResolver.add_implicit_resolver('tag:yaml.org,2002:yaml',/^(?:!|&|\*)$/,'!&*')
+  BaseResolver.add_implicit_resolver('tag:yaml.org,2002:sym',/^(?:\:\w+)$/,':')
 end
 
