@@ -404,6 +404,10 @@ module RbYAML
       val.empty? ? nil : val
     end
 
+    def construct_yaml_sym(node)
+      str(node).sub(":", "").to_sym
+    end
+    
     def construct_yaml_seq(node)
       seq(node)
     end
@@ -436,6 +440,7 @@ module RbYAML
   SafeConstructor.add_constructor('tag:yaml.org,2002:str',:construct_yaml_str)
   SafeConstructor.add_constructor('tag:yaml.org,2002:seq',:construct_yaml_seq)
   SafeConstructor.add_constructor('tag:yaml.org,2002:map',:construct_yaml_map)
+  SafeConstructor.add_constructor('tag:yaml.org,2002:sym', :construct_yaml_sym)
   SafeConstructor.add_constructor(nil,:construct_private_type)
 
   class Constructor < SafeConstructor
