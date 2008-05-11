@@ -1,11 +1,12 @@
 # Copyright (c) 2007, Evan Phoenix
 # Distributed under BSD License
-require File.dirname(__FILE__) + '/../../spec_helper'
-require File.dirname(__FILE__) + '/fixtures/common'
+# Modified by Long Sun
 
-describe "YAML.tagurize" do
+require File.join(File.dirname(__FILE__), '..', 'spec_helper')
+
+describe "RbYAML.tagurize" do
   it "converts a type_id to a taguri" do
-    YAML.tagurize('wtf').should == "tag:yaml.org,2002:wtf"
-    YAML.tagurize(1).should == 1
+    RbYAML.tagurize('wtf').should == "tag:yaml.org,2002:wtf"
+    RbYAML.tagurize(1).should == 1
   end  
 end

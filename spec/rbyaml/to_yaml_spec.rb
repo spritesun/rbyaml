@@ -1,10 +1,11 @@
 # Copyright (c) 2007, Evan Phoenix
 # Distributed under BSD License
-require File.dirname(__FILE__) + '/../../spec_helper'
-require File.dirname(__FILE__) + '/fixtures/common'
+# Modified by Long Sun
+
+require File.join(File.dirname(__FILE__), '..', 'spec_helper')
 
 describe "Object#to_yaml" do
-  it "returns the YAML representation of a Symbol" do
+  it "returns the RbYAML representation of a Symbol" do
     :symbol.to_yaml.should ==  "--- :symbol\n"
   end
 end

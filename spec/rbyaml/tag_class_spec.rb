@@ -1,10 +1,11 @@
 # Copyright (c) 2007, Evan Phoenix
 # Distributed under BSD License
-require File.dirname(__FILE__) + '/../../spec_helper'
-require File.dirname(__FILE__) + '/fixtures/common'
+# Modified by Long Sun
 
-describe "YAML.tag_class" do
+require File.join(File.dirname(__FILE__), '..', 'spec_helper')
+
+describe "RbYAML.tag_class" do
   it "associates a taguri tag with a ruby class" do
-    YAML.tag_class('rubini.us','rubinius').should == "rubinius"
+    RbYAML.tag_class('rubini.us','rubinius').should == "rubinius"
   end  
 end
