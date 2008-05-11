@@ -159,6 +159,6 @@ module RbYAML
   # The following implicit resolver is only for documentation purposes. It cannot work
   # because plain scalars cannot start with '!', '&', or '*'.
   BaseResolver.add_implicit_resolver('tag:yaml.org,2002:yaml',/^(?:!|&|\*)$/,'!&*')
-  BaseResolver.add_implicit_resolver('tag:yaml.org,2002:sym',/^(?:\:\w+)$/,':')
+  BaseResolver.add_implicit_resolver('tag:yaml.org,2002:sym',/^(?:\:.+)$/,':')
 end
 
