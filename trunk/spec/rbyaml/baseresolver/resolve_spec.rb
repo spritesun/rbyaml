@@ -5,6 +5,7 @@ require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
 describe "BaseResolver#resolve" do
   before(:all) do
     @br = RbYAML::BaseResolver.new
+    @br.descend_resolver(nil, nil)
     @implicit = [true, false]
   end
 
