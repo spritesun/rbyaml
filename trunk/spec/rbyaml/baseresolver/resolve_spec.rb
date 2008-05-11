@@ -17,6 +17,10 @@ describe "BaseResolver#resolve" do
     @br.resolve(RbYAML::ScalarNode, ":username", @implicit).should == 'tag:yaml.org,2002:sym'
   end
 
+  it "should resolve symbol which contains blank" do
+    @br.resolve(RbYAML::ScalarNode, ":user name", @implicit).should == 'tag:yaml.org,2002:sym'
+  end
+
   it "resolves bool" do
     @br.resolve(RbYAML::ScalarNode, "true", @implicit).should == 'tag:yaml.org,2002:bool'
     @br.resolve(RbYAML::ScalarNode, "false", @implicit).should == 'tag:yaml.org,2002:bool'

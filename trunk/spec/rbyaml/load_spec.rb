@@ -18,5 +18,9 @@ describe "RbYAML#load" do
   
   it "should return a symbol when accepting a string include symbol" do
     RbYAML.load( "--- :locked" ).should == :locked
-  end  
+  end
+
+  it "should parse symbol stream which contains blank" do
+    RbYAML.load(":user name: This is the user name.").should == { :'user name' => 'This is the user name.'}
+  end
 end
