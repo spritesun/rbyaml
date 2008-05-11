@@ -133,7 +133,7 @@ module RbYAML
         end
         implicit = implicit[1]
       end
-      exact_paths = @resolver_exact_paths[-1] || []
+      exact_paths = @resolver_exact_paths[-1]
       return exact_paths[kind] if exact_paths.include?(kind) 
       return exact_paths[nil] if exact_paths.include?(nil)
       if ScalarNode == kind
