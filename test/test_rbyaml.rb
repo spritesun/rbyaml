@@ -1,8 +1,8 @@
 $:.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
+require 'rubygems'
 require 'rbyaml'
 require 'test/unit'
-require 'rubygems'
 
 class TestRbYAML < Test::Unit::TestCase
   def test_basic_load
