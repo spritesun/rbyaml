@@ -4,6 +4,11 @@ require 'rbyaml/stream'
 require 'rbyaml/dumper'
 
 module RbYAML
+  # Return a Resolver class
+  def self.resolver
+    Resolver
+  end
+
   def self.dump(obj, io = nil, opts={})
     _dump(obj,io,Dumper,opts)
   end
@@ -47,12 +52,12 @@ module RbYAML
   def self.parse_documents( io, &doc_proc )
     #    YAML.each_node( io, &doc_proc )
   end
-  
+
   def self.load_stream( io )
     d = nil
     load_documents(io) { |doc|
       d = Stream.new( nil ) if not d
-      d.add( doc ) 
+      d.add( doc )
     }
     d
   end
@@ -60,7 +65,7 @@ module RbYAML
   def self.dump_stream( *objs )
     d = RbYAML::Stream.new
     objs.each do |doc|
-      d.add( doc ) 
+      d.add( doc )
     end
     d.emit
   end
@@ -129,6 +134,11 @@ module RbYAML
 
   def self.quick_emit_node( oid, rep, &e )
     e.call(rep)
+  end
+
+  # Convert a type_id to a taguri
+  def self.tagurize(val)
+    resolver.tagurize(val)
   end
 end
 
