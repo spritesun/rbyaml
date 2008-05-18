@@ -8,4 +8,8 @@ describe "Object#to_yaml" do
   it "returns the RbYAML representation of a Symbol" do
     :symbol.to_yaml.should ==  "--- :symbol\n"
   end
+
+  it "should parse string to YAML representation" do
+    "this is a string".to_yaml.should == "--- this is a string\n"
+  end
 end
