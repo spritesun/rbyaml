@@ -1,5 +1,18 @@
 require 'date'
 
+def inject_method
+  klass_list = [Hash, Struct, Array, Exception, String, Symbol, Range, Regexp, Time, Date, Numeric, Integer, Float, TrueClass, FalseClass, NilClass]
+  klass_list.each do |klass|
+    klass.class_eval <<-END_METHOD
+    def to_yaml(opts={})
+      super
+    end
+    END_METHOD
+  end
+end
+
+inject_method
+
 class Class
   def to_yaml( opts = {} )
     raise RbYAML::TypeError, "can't dump anonymous class %s" % self.class
@@ -7,7 +20,7 @@ class Class
 end
 
 class Object
-#  yaml_as "tag:ruby.yaml.org,2002:object"
+  #  yaml_as "tag:ruby.yaml.org,2002:object"
   def is_complex_yaml?; true; end
   def to_yaml_style; end
   def to_yaml_properties; instance_variables.sort; end
@@ -156,7 +169,7 @@ class String
         bind(s).
         call( val.delete( 'str' ) )
       val.each { |k,v| s.instance_variable_set( k, v ) }
-        s
+      s
     else
       raise RbYAML::TypeError, "Invalid String: " + val.inspect
     end
@@ -186,7 +199,7 @@ class Symbol
   def Symbol.yaml_new( klass, tag, val )
     if String === val
       val.intern
-      else
+    else
       raise RbYAML::TypeError, "Invalid Symbol: " + val.inspect
     end
   end
