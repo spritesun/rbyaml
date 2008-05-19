@@ -1,17 +1,12 @@
 require 'date'
 
-def inject_method
-  klass_list = [Hash, Struct, Array, Exception, String, Symbol, Range, Regexp, Time, Date, Numeric, Integer, Float, TrueClass, FalseClass, NilClass]
-  klass_list.each do |klass|
-    klass.class_eval <<-END_METHOD
-    def to_yaml(opts={})
+[Hash, Struct, Array, Exception, String, Symbol, Range, Regexp, Time, Date, Numeric, Integer, Float, TrueClass, FalseClass, NilClass].each do |klass|
+  klass.class_eval do
+    def to_yaml(opts = {})
       super
     end
-    END_METHOD
   end
 end
-
-inject_method
 
 class Class
   def to_yaml( opts = {} )
