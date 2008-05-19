@@ -1,0 +1,13 @@
+#summary Why RbYAML?
+#labels Featured
+
+= Introduction =
+
+YAML is a significant ruby library. It is used generally, like as RubyGems and RoR, etc.
+To implement YAML processor by pure ruby, that means it can be used by most alternative ruby implementations directly.
+
+= Details =
+
+YAML has reached 1.2 level, but Syck has no maintainer now. Syck, as a significant part of it being implemented in C, most alternative ruby implementations can not use it directly.
+A more mature and more efficient processor could be necessary. For nearly all the Ruby projects are worked with YAML.
+Being implemented in pure ruby means it can be integrated with bottom ruby implementation comfortably, it will be a good choice for various ruby implementations, just like CRuby, rubinius, JRuby and XRuby.
