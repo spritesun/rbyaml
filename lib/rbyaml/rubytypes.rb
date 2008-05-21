@@ -1,5 +1,6 @@
 require 'date'
 
+# overwrite to_yaml method of some standard type
 [Hash, Struct, Array, Exception, String, Symbol, Range, Regexp, Time, Date, Numeric, Integer, Float, TrueClass, FalseClass, NilClass].each do |klass|
   klass.class_eval do
     def to_yaml(opts = {})
