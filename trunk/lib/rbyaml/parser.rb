@@ -55,8 +55,14 @@ module RbYAML
 
   class Parser
     DEFAULT_TAGS = {
-      '!' => '!',
-      '!!' => 'tag:yaml.org,2002:'
+      '1.0' => {
+        '!' => 'tag:yaml.org,2002:',
+        '!!' => ''
+      },
+      '1.1' =>{
+        '!' => '!',
+        '!!' => 'tag:yaml.org,2002:'
+      },
     }
 
     DOCUMENT_END_TRUE = DocumentEndEvent.new(true)
@@ -65,7 +71,7 @@ module RbYAML
     SEQUENCE_END = SequenceEndEvent.new
     STREAM_END = StreamEndEvent.new
     STREAM_START = StreamStartEvent.new
-    
+
 
     def initialize(scanner)
       @scanner = scanner
@@ -149,7 +155,7 @@ module RbYAML
       @scanner.get_token
       STREAM_END
     end
-    
+
     def document_start_implicit
       token = @scanner.peek_token
       version, tags = process_directives
@@ -261,7 +267,7 @@ module RbYAML
     def empty_scalar
       process_empty_scalar
     end
-    
+
 
 # PRODUCTIONS
     def stream
@@ -325,7 +331,7 @@ module RbYAML
           anchor = @scanner.get_token.value
         end
       end
-      
+
       if !tag.nil? and tag != "!"
         handle, suffix = tag
         if !handle.nil?
@@ -386,7 +392,7 @@ module RbYAML
           @parse_steck += [:block_sequence_entry]
           return empty_scalar
         end
-      end      
+      end
       nil
     end
 
@@ -559,7 +565,7 @@ module RbYAML
         empty_scalar
       end
     end
-   
+
 
     def process_directives
       # DIRECTIVE*
@@ -581,8 +587,8 @@ module RbYAML
       else
         value = @yaml_version, nil
       end
-      for key in DEFAULT_TAGS.keys
-        @tag_handles[key] = DEFAULT_TAGS[key] if !@tag_handles.include?(key)
+      DEFAULT_TAGS[$current_yaml_version].each do |key, value|
+        @tag_handles[key] = value if !@tag_handles.include?(key)
       end
       value
     end
