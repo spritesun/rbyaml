@@ -9,7 +9,6 @@ module RbYAML
   #
   VERSION = '0.20'
   SUPPORTED_YAML_VERSIONS = ['1.0','1.1']
-  CURRENT_YAML_VERSION = '1.1'
 
   LINE_BR_REG = /[\n\x85]|(?:\r[^\n])/
   NON_PRINTABLE_RE = /[^\x09\x0A\x0D\x20-\x7E\x85\xA0-\xFF]/

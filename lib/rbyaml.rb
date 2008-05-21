@@ -4,6 +4,7 @@ require 'rbyaml/stream'
 require 'rbyaml/dumper'
 
 module RbYAML
+  $current_yaml_version = '1.1'
   # Return a Resolver class
   def self.resolver
     Resolver
