@@ -7,15 +7,15 @@ class LoadAs #:nodoc:
 
   def matches?(actual_yaml)
     @actual = RbYAML.load(actual_yaml)
-    @actual == (@expected)
+    @actual == @expected
   end
 
   def failure_message
-    return "expected #{@expected.inspect}, got #{@actual.inspect} (using .equal?)", @expected, @actual
+    "expected #{@expected.inspect}, got #{@actual.inspect} (using .equal?)"
   end
 
   def negative_failure_message
-    return "expected #{@actual.inspect} not to equal #{@expected.inspect} (using .equal?)", @expected, @actual
+    "expected #{@actual.inspect} not to equal #{@expected.inspect} (using .equal?)"
   end
 
   def description
