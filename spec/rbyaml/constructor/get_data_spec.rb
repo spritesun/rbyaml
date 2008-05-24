@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'fixtures', 'classes')
+require File.join(File.dirname(__FILE__), 'constructor_helper.rb')
 
 describe "RbYAML::Constructor#get_data" do
   it "should return a symbol when getting a symbol stream" do

@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'fixtures', 'classes')
+require File.join(File.dirname(__FILE__), 'composer_helper')
 
 describe "RbYAML:Composer#get_node" do
   it "should get symbol node when compose by symbol string " do
