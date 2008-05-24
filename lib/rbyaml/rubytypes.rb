@@ -16,7 +16,7 @@ class Class
 end
 
 class Object
-  #  yaml_as "tag:ruby.yaml.org,2002:object"
+  yaml_as "tag:ruby.yaml.org,2002:object"
   def is_complex_yaml?; true; end
   def to_yaml_style; end
   def to_yaml_properties; instance_variables.sort; end

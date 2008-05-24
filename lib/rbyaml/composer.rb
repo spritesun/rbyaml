@@ -28,6 +28,9 @@ module RbYAML
     def compose_document
       # Drop the STREAM-START event.
       @parser.get_event if @parser.peek_event.__is_stream_start
+      if @parser.peek_event.__is_stream_end
+        return ScalarNode.new("tag:yaml.org,2002:null", "")
+      end
       # Drop the DOCUMENT-START event.
       @parser.get_event
       # Compose the root node.

@@ -5,20 +5,28 @@ describe "RbYAML:Composer#compose_document" do
     @sym_composer = RbYAML::Composer.new_by_string(":sym")
     @int_composer = RbYAML::Composer.new_by_string("12")
   end
-  
-  it "should get string value when compose by symbol string" do
-    @sym_composer.compose_document.value.should == ":sym"
+
+  it "should get symbol node when compose by symbol string" do
+    node = ":sym".compose_to_node
+    node.value.should == ":sym"
+    node.tag.should == "tag:yaml.org,2002:sym"
   end
-  
-  it "should get sym tag when compose by symbol string" do
-    @sym_composer.compose_document.tag.should == "tag:yaml.org,2002:sym"
+
+  it "should get integer node when compose by integer string" do
+    node = "12".compose_to_node
+    node.value.should == "12"
+    node.tag.should == "tag:yaml.org,2002:int"
   end
-  
-  it "should get string value when compose by integer string" do
-    @int_composer.compose_document.value.should == "12"
+
+  it "should get object node when composing by empty string" do
+    node = "".compose_to_node
+    node.tag.should == "tag:yaml.org,2002:null"
+    node.value.should == ""
   end
-  
-  it "should get int tag when compose by integer string" do
-    @int_composer.compose_document.tag.should == "tag:yaml.org,2002:int"
+end
+
+class String
+  def compose_to_node
+    RbYAML::Composer.new_by_string(self).compose_document
   end
 end
