@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'fixtures', 'classes')
+require File.join(File.dirname(__FILE__), 'composer_helper')
 
 describe "RbYAML:Composer#compose_document" do
   before :each do

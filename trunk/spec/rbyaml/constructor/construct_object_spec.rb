@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'fixtures', 'classes')
+require File.join(File.dirname(__FILE__), 'constructor_helper.rb')
 
 describe "RbYAML:Constructor#construct_object" do
   it "should return symbol data when getting symbol node" do
