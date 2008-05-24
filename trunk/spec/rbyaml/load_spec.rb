@@ -2,7 +2,7 @@
 # Distributed under BSD License.
 # Modified by Long Sun <spritesun@gmail.com>.
 
-require File.join(File.dirname(__FILE__), 'rbyaml_helper')
+require File.join(File.dirname(__FILE__), "rbyaml_helper")
 
 describe "RbYAML#load" do
   after :each do
@@ -17,11 +17,12 @@ describe "RbYAML#load" do
   end
 
   it "should return a symbol when accepting a string include symbol" do
-    RbYAML.load( "--- :locked" ).should == :locked
+    "--- :locked".should load_as(:locked)
   end
 
   it "should load symbol stream which contains blank successfully" do
-    RbYAML.load(":user name: This is the user name.").should == { :'user name' => 'This is the user name.'}
+    expected = { :'user name' => 'This is the user name.'}
+    %Q{:user name: This is the user name.}.should load_as(expected)
   end
 
   it "should load String successfully" do
@@ -59,6 +60,7 @@ describe "RbYAML#load" do
 
   it "should load string with empty value as empty string" do
     "---\n!!str".should load_as("")
+    "---\n- !!str\n- :symbol".should load_as(["", :symbol])
 
     load "rbyaml_1.0.rb"
     "---\n!str".should load_as("")
@@ -68,4 +70,10 @@ describe "RbYAML#load" do
   it "should load empty yaml file as nil" do
     "".should load_as(nil)
   end
+
+  it "should load various object with empty value as emtpy object" do
+    pending
+    "!!object".should load_as(Object.new)
+  end
+
 end
