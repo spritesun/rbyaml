@@ -59,11 +59,11 @@ describe "RbYAML#load" do
   end
 
   it "should load string with empty value as empty string" do
-    "---\n!!str".should load_as("")
-    "---\n- !!str\n- :symbol".should load_as(["", :symbol])
+    "---\n!!str".should load_as(String.new)
+    "---\n- !!str\n- :symbol".should load_as([String.new, :symbol])
 
     load "rbyaml_1.0.rb"
-    "---\n!str".should load_as("")
+    "---\n!str".should load_as(String.new)
     load "rbyaml.rb"
   end
 
@@ -74,6 +74,7 @@ describe "RbYAML#load" do
   it "should load various object with empty value as emtpy object" do
     pending
     "!!object".should load_as(Object.new)
+    "!!null".should load_as(NilClass.new)
   end
 
 end
