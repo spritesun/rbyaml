@@ -64,7 +64,7 @@ module RbYAML
 
       @best_width = 80
       @best_width = opts[:BestWidth] if opts[:BestWidth] != 0 && opts[:BestWidth] > @best_indent*2
-      
+
       @best_line_break = "\n"
 
       # Tag prefixes.
@@ -277,7 +277,7 @@ module RbYAML
         expect_node(false,true)
       end
     end
-    
+
     def expect_flow_sequence_item
       if SequenceEndEvent === @event
         @indent =  @indents.pop
@@ -295,7 +295,7 @@ module RbYAML
         expect_node(false,true)
       end
     end
-    
+
     # Flow mapping handlers.
 
     def expect_flow_mapping
@@ -347,7 +347,7 @@ module RbYAML
         end
       end
     end
-    
+
     def expect_flow_mapping_simple_value
       write_indicator(": ", false,true)
       @states << :expect_flow_mapping_key
@@ -360,9 +360,9 @@ module RbYAML
       @states << :expect_flow_mapping_key
       expect_node(false,false,true)
     end
-    
+
     # Block sequence handlers.
-    
+
     def expect_block_sequence
       indentless = @mapping_context && !@indention
       increase_indent(false,indentless)
@@ -372,7 +372,7 @@ module RbYAML
     def expect_first_block_sequence_item
       expect_block_sequence_item(true)
     end
-    
+
     def expect_block_sequence_item(first=false)
       if !first && SequenceEndEvent === @event
         @indent = @indents.pop
@@ -386,7 +386,7 @@ module RbYAML
     end
 
     # Block mapping handlers.
-    
+
     def expect_block_mapping
       increase_indent(false)
       @state = :expect_first_block_mapping_key
@@ -395,7 +395,7 @@ module RbYAML
     def expect_first_block_mapping_key
       expect_block_mapping_key(true)
     end
-    
+
     def expect_block_mapping_key(first=false)
       if !first && MappingEndEvent === @event
         @indent = @indents.pop
@@ -412,7 +412,7 @@ module RbYAML
         end
       end
     end
-    
+
     def expect_block_mapping_simple_value
       write_indicator(": ", false,true)
       @states << :expect_block_mapping_key
@@ -431,7 +431,7 @@ module RbYAML
     def check_empty_sequence
       @event.__is_sequence_start && !@events.empty? && @events.first.__is_sequence_end
     end
-    
+
     def check_empty_mapping
       @event.__is_mapping_start && !@events.empty? && @events.first.__is_mapping_end
     end
@@ -457,13 +457,13 @@ module RbYAML
         length += @analysis.scalar.length
       end
 
-      (length < 128 && (@event.__is_alias || (@event.__is_scalar && !@analysis.empty && !@analysis.multiline) || 
+      (length < 128 && (@event.__is_alias || (@event.__is_scalar && !@analysis.empty && !@analysis.multiline) ||
                         check_empty_sequence || check_empty_mapping))
     end
 
-    
+
     # Anchor, Tag, and Scalar processors.
-    
+
     def process_anchor(indicator)
       if @event.anchor.nil?
         @prepared_anchor = nil
@@ -473,7 +473,7 @@ module RbYAML
       write_indicator(indicator+@prepared_anchor, true) if @prepared_anchor && !@prepared_anchor.empty?
       @prepared_anchor = nil
     end
-    
+
     def process_tag
       tag = @event.tag
       if ScalarEvent === @event
@@ -497,16 +497,16 @@ module RbYAML
       write_indicator(@prepared_tag, true) if @prepared_tag && !@prepared_tag.empty?
       @prepared_tag = nil
     end
-    
+
     def choose_scalar_style
       @analysis = analyze_scalar(@event.value) if @analysis.nil?
-      return '"' if @event.style == '"' || @canonical            
+      return '"' if @event.style == '"' || @canonical
       if !@event.style && @event.implicit[0]
         if !(@simple_key_context && (@analysis.empty || @analysis.multiline)) && ((@flow_level!=0 && @analysis.allow_flow_plain) || (@flow_level == 0 && @analysis.allow_block_plain))
           return ""
         end
       end
-      if !@event.style && @event.implicit && (!(@simple_key_context && (@analysis.empty || @analysis.multiline)) && 
+      if !@event.style && @event.implicit && (!(@simple_key_context && (@analysis.empty || @analysis.multiline)) &&
                                               (@flow_level!=0 && @analysis.allow_flow_plain || (@flow_level==0 && @analysis.allow_block_plain)))
         return ""
       end
@@ -514,7 +514,7 @@ module RbYAML
       return "'" if (!@event.style || @event.style == "'") && (@analysis.allow_single_quoted && !(@simple_key_context && @analysis.multiline))
       return '"'
     end
-    
+
     def process_scalar
       @analysis = analyze_scalar(@event.value) if @analysis.nil?
       @style = choose_scalar_style if @style.nil?
@@ -541,7 +541,7 @@ module RbYAML
       raise EmitterError.new("unsupported YAML version: #{major}.#{minor}") if major != 1
       "#{major}.#{minor}"
     end
-    
+
     def prepare_tag_handle(handle)
       raise EmitterError.new("tag handle must not be empty") if handle.nil? || handle.empty?
       raise EmitterError("tag handle must start and end with '!': #{handle}") if handle[0] != ?! || handle[-1] != ?!
@@ -632,16 +632,16 @@ module RbYAML
       # The current series of whitespaces start at the beginning of the
       # scalar.
       leading = false
-      
+
       index = 0
       while index < scalar.length
         ch = scalar[index]
-        
+
         # Check for indicators.
-        
+
         if index == 0
           # Leading indicators are special characters.
-          if "#,[]{}#&*!|>'\"%@`".include?(ch) 
+          if "#,[]{}#&*!|>'\"%@`".include?(ch)
             flow_indicators = true
             block_indicators = true
           end
@@ -673,7 +673,7 @@ module RbYAML
           special_characters = true
         end
         # Spaces, line breaks, and how they are mixed. State machine.
-        
+
         # Start or continue series of whitespaces.
         if " \n\x85".include?(ch)
           if spaces && breaks
@@ -716,7 +716,7 @@ module RbYAML
           end
           spaces = breaks = mixed = leading = false
         end
-        
+
         # Series of whitespaces reach the end.
         if (spaces || breaks) && (index == scalar.length-1)
           if spaces && breaks
@@ -727,7 +727,7 @@ module RbYAML
           elsif breaks
             trailing_breaks = true
             leading_breaks = true if leading
-          end    
+          end
           spaces = breaks = mixed = leading = false
         end
         # Prepare for the next character.
@@ -774,25 +774,25 @@ module RbYAML
     end
 
     # Writers.
-    
+
     def flush_stream
       @stream.flush if @stream.respond_to?(:flush)
     end
-    
+
     def write_stream_start
     end
-    
+
     def write_stream_end
       flush_stream
     end
-    
+
     def write_indicator(indicator, need_whitespace,whitespace=false,indention=false)
       if @whitespace || !need_whitespace
         data = indicator
       else
         data = " "+indicator
       end
-      
+
       @whitespace = whitespace
       @indention = @indention && indention
       @column += data.length
@@ -825,13 +825,13 @@ module RbYAML
       @stream.write(data)
       write_line_break
     end
-    
+
     def write_tag_directive(handle_text, prefix_text)
       data = "%TAG #{handle_text} #{prefix_text}"
       @stream.write(data)
       write_line_break
     end
-    
+
     # Scalar streams.
 
     def write_single_quoted(text, split=true)
@@ -881,12 +881,12 @@ module RbYAML
             end
           end
         end
-        
+
         if !ch.nil?
           spaces = ch == 32
           breaks = "\n\x85".include?(ch)
         end
-        
+
         ending += 1
       end
       write_indicator("'", false)
@@ -954,7 +954,7 @@ module RbYAML
         ch = text[ending] if ending < text.length
         if breaks
           if ch.nil? || !"\n\x85".include?(ch)
-            write_line_break if !leading_space && !ch.nil? && ch != 32 && text[start] == ?\n                        
+            write_line_break if !leading_space && !ch.nil? && ch != 32 && text[start] == ?\n
             leading_space = ch == 32
             (text[start...ending]).each_byte { |br|
               if br == ?\n
