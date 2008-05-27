@@ -43,12 +43,12 @@ describe "RbYAML#load" do
   end
 
   it "should load !str as application tag in YAML1.0" do
-    load "rbyaml_1.0.rb"
+    load_yaml "1.0"
 
     "!str str".should load_as("str")
     "!str 1.0".should load_as("1.0")
 
-    load "rbyaml.rb"
+    load_yaml
   end
 
   it "should load Array successfully" do
@@ -62,19 +62,25 @@ describe "RbYAML#load" do
     "---\n!!str".should load_as(String.new)
     "---\n- !!str\n- :symbol".should load_as([String.new, :symbol])
 
-    load "rbyaml_1.0.rb"
+    load_yaml "1.0"
     "---\n!str".should load_as(String.new)
-    load "rbyaml.rb"
+    load_yaml
   end
 
   it "should load empty yaml file as nil" do
     "".should load_as(nil)
   end
 
-  it "should load various object with empty value as emtpy object" do
-    pending
-    "!!object".should load_as(Object.new)
-    "!!null".should load_as(NilClass.new)
+  it "should load emtpy int and null tag" do
+    "!!int".should load_as(0)
+    "!!null".should load_as(nil)
   end
 
+  it "should load document separator" do
+    "---\n".should load_as(nil)
+
+    "--- ---\n".should load_as("---")
+    "---".should load_as("---")
+    "---\0".should load_as("---")
+  end
 end

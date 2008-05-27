@@ -13,7 +13,7 @@ module RbYAML
   LINE_BR_REG = /[\n\x85]|(?:\r[^\n])/
   NON_PRINTABLE_RE = /[^\x09\x0A\x0D\x20-\x7E\x85\xA0-\xFF]/
 
-  ENDING = /^---[\0 \t\r\n\x85]$/
+  ENDING = /^---[ \t\r\n\x85]$/
   START = /^\.\.\.[\0 \t\r\n\x85]$/
   NULL_OR_OTHER = "\0 \t\r\n\x85"
   #    BEG = /^([^\0 \t\r\n\x85\-?:,\[\]{}#&*!|>'"%@`]|([\-?:][^\0 \t\r\n\x85]))/    #Since current SYCK handles this one wrong, we have to allow backtick right now.

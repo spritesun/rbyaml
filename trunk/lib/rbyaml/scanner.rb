@@ -158,7 +158,7 @@ module RbYAML
       end
       @buffer[pix-1]
     end
-    
+
     def prefix(length=1)
       update(length) unless @pointer+length < @buffer_length
       @buffer[@pointer...@pointer+length]
@@ -194,7 +194,7 @@ module RbYAML
       @pointer += 1
       @pointer1 += 1
     end
-    
+
     def forward2
       update(3) unless @pointer1+2 < @buffer_length
       buff = @buffer[@pointer...@pointer1+2]
@@ -248,7 +248,7 @@ module RbYAML
       @pointer += length
       @pointer1 += length
     end
-    
+
     def check_printable(data)
       if NON_PRINTABLE_RE =~ data
         position = @buffer.length-@pointer+($~.offset(0)[0])
@@ -300,13 +300,13 @@ module RbYAML
       end
       return false
     end
-    
+
     def peek_token
       # Return the next token, but do not delete if from the queue.
       fetch_more_tokens while need_more_tokens
       return @tokens[0] unless @tokens.empty?
     end
-    
+
     def get_token
       # Return the next token.
       fetch_more_tokens while need_more_tokens
@@ -324,7 +324,7 @@ module RbYAML
         fetch_more_tokens while need_more_tokens
       end
     end
-    
+
     def need_more_tokens
       return false if @done
       @tokens.empty? || next_possible_simple_key == @tokens_taken
@@ -370,14 +370,14 @@ module RbYAML
     end
 
     # Simple keys treatment.
-    
+
     def next_possible_simple_key
       # Return the number of the nearest possible simple key. Actually we
       # don't need to loop through the whole dictionary.
       @possible_simple_keys.each_value {|key| return key.token_number if key.token_number}
       nil
     end
-    
+
     def save_possible_simple_key
       # The next token may start a simple key. We check if it's possible
       # and save its position. This function is called for
@@ -410,7 +410,7 @@ module RbYAML
         @tokens << BLOCK_END
       end
     end
-    
+
     def add_indent(col)
       # Check if we need to increase indentation.
       if @indent < col
@@ -493,15 +493,15 @@ module RbYAML
       forward1
       @tokens << token
     end
-    
+
     def fetch_flow_sequence_end
       fetch_flow_collection_end(FLOW_SEQUENCE_END)
     end
-    
+
     def fetch_flow_mapping_end
       fetch_flow_collection_end(FLOW_MAPPING_END)
     end
-    
+
     def fetch_flow_collection_end(token)
       # Decrease the flow level.
       @flow_level -= 1
@@ -557,7 +557,7 @@ module RbYAML
       forward1
       @tokens << KEY
     end
-    
+
     def fetch_value
       key = @possible_simple_keys[@flow_level]
       # Do we determine a simple key?
@@ -635,7 +635,7 @@ module RbYAML
     def fetch_single
       fetch_flow_scalar(?')
     end
-    
+
     def fetch_double
       fetch_flow_scalar(?")
     end
@@ -648,7 +648,7 @@ module RbYAML
       # Scan and add SCALAR.
       @tokens << scan_flow_scalar(style)
     end
-    
+
     def fetch_plain
       # A plain scalar could be a simple key.
       save_possible_simple_key
@@ -660,7 +660,7 @@ module RbYAML
       @tokens << scan_plain
     end
 
-    
+
     # Scanners.
     def scan_to_next_token
       # We ignore spaces, line breaks and comments.
@@ -694,7 +694,7 @@ module RbYAML
         end
       end
     end
-    
+
     def scan_directive
       # See the specification for details.
       forward1
@@ -750,7 +750,7 @@ module RbYAML
       forward(length)
       value
     end
-    
+
     def scan_tag_directive_value
       # See the specification for details.
       forward1 while peek0 == 32
@@ -773,7 +773,7 @@ module RbYAML
       raise ScannerError.new("while scanning a directive","expected ' ', but found #{peek0}") if !NULL_BL_LINEBR.include?(peek0)
       value
     end
-    
+
     def scan_directive_ignored_line
       # See the specification for details.
       forward1 while peek0 == 32
@@ -784,7 +784,7 @@ module RbYAML
       raise ScannerError.new("while scanning a directive","expected a comment or a line break, but found #{peek0.to_s}") if !NULL_OR_LINEBR.include?(peek0)
       scan_line_break
     end
- 
+
     def scan_anchor(token)
       # The specification does not restrict characters for anchors and
       # aliases. This may lead to problems, for instance, the document:
@@ -889,7 +889,7 @@ module RbYAML
             chunks << ' ' if breaks.empty?
           else
             chunks << line_break
-          end 
+          end
           # This is Clark Evans's interpretation (also in the spec
           # examples):
           #
@@ -905,7 +905,7 @@ module RbYAML
           break
         end
       end
-      
+
       # Chomp the tail.
       if chomping
         chunks << line_break
@@ -999,7 +999,7 @@ module RbYAML
       forward1
       ScalarToken.new(chunks.to_s, false, style)
     end
-    
+
     def scan_flow_scalar_non_spaces(double)
       # See the specification for details.
       chunks = []
@@ -1068,7 +1068,7 @@ module RbYAML
       end
       chunks
     end
-    
+
     def scan_flow_scalar_breaks(double)
       # See the specification for details.
       chunks = []
@@ -1087,7 +1087,7 @@ module RbYAML
         end
       end
     end
-    
+
     def scan_plain
       # See the specification for details.
       # We add an additional restriction for the flow context:
@@ -1162,7 +1162,7 @@ module RbYAML
       chunks
     end
 
-    
+
     def scan_tag_handle(name)
       # See the specification for details.
       # For some strange reasons, the specification does not allow '_' in
@@ -1186,7 +1186,7 @@ module RbYAML
       forward(length)
       value
     end
-    
+
     def scan_tag_uri(name)
       # See the specification for details.
       # Note: we do not check if URI is well-formed.
@@ -1208,7 +1208,7 @@ module RbYAML
         chunks << prefix(length)
         forward(length)
       end
-      
+
       raise ScannerError.new("while parsing a #{name}","expected URI, but found #{ch}") if chunks.empty?
       chunks.to_s
     end

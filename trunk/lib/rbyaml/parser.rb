@@ -366,7 +366,6 @@ module RbYAML
         return scalar
       else
         ScalarEvent.new(@anchors.last, @tags.last, [false, false], "", nil)
-#         raise ParserError.new("while scanning a node","expected the node content, but found #{token.tid}")
       end
     end
 
