@@ -362,15 +362,13 @@ module RbYAML
         return construct_private_type(node)
       end
       values = match.captures.map {|val| val.to_i}
-      fraction = values[6]
-      if fraction != 0
-        fraction *= 10 while 10*fraction < 1000
-        values[6] = fraction
-      end
+
+      values[6] = (("." + values[6].to_s).to_f * 1e6).round
+
       stamp = Time.gm(values[0],values[1],values[2],values[3],values[4],values[5],values[6])
 
       diff = values[7] * 3600 + values[8] * 60
-      return stamp-diff
+      return stamp - diff
     end
 
     def construct_yaml_omap(node)
