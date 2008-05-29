@@ -76,11 +76,34 @@ describe "RbYAML#load" do
     "!!null".should load_as(nil)
   end
 
-  it "should load document separator" do
+  it "should load document start marker" do
     "---\n".should load_as(nil)
-
     "--- ---\n".should load_as("---")
+
     "---".should load_as("---")
     "---\0".should load_as("---")
+  end
+
+  it "should not load string after \0" do
+    "begin\0end".should load_as("begin")
+    "---\n\0word".should load_as(nil)
+  end
+
+  it "should load canonical timestamp" do
+    #     "2007-01-01 01:12:34".should load_as({ "a" => "2007-01-01 01:12:34"})
+    "2001-12-15T02:59:43.1Z".should load_as(Time.gm(2001, "dec", 15, 2, 59, 43, 100000))
+    # space separated:  2001-12-14 21:59:43.10 -5
+    # no time zone (Z): 2001-12-15 2:59:43.10
+    # date (00:00:00Z): 2002-12-14
+  end
+
+  it "should load fraction of a second" do
+    "2001-12-15T02:59:43.12Z".should load_as(Time.gm(2001, "dec", 15, 2, 59, 43, 120000))
+    "2001-12-15T02:59:43.123456Z".should load_as(Time.gm(2001, "dec", 15, 2, 59, 43, 123456))
+    "2001-12-15T02:59:43.1234567890000Z".should load_as(Time.gm(2001, "dec", 15, 2, 59, 43, 123457))
+  end
+
+  it "should load valid iso8601 timestamp" do
+#     "2001-12-14t21:59:43.10-05:00".should load_as(Time.gm(2001, "dec", 14, 21, 59, 43, 123457))
   end
 end
