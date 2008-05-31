@@ -104,6 +104,20 @@ describe "RbYAML#load" do
   end
 
   it "should load valid iso8601 timestamp" do
-#     "2001-12-14t21:59:43.10-05:00".should load_as(Time.gm(2001, "dec", 14, 21, 59, 43, 123457))
+    "2001-12-14t21:59:43.10-05:00".should load_as(Time.gm(2001, "dec", 15, 2, 59, 43, 1e5))
+    "2001-12-14t21:59:43.10 +00:00".should load_as(Time.gm(2001, "dec", 14, 21, 59, 43, 1e5))
+  end
+
+  it "should load space separated timestamp" do
+    "2001-12-14 21:59:43.10 -5".should load_as(Time.gm(2001, "dec", 15, 2, 59, 43, 1e5))
+  end
+
+  it "should load no time zone (Z) timestamp as UTC" do
+    "2001-12-15 2:59:43.10".should load_as(Time.gm(2001, "dec", 15, 2, 59, 43, 1e5))
+    "2001-12-15 2:59:43".should load_as(Time.gm(2001, "dec", 15, 2, 59, 43, 0))
+  end
+
+  it "should load no time part timestamp as date" do
+    "2002-12-14".should load_as(Date.civil(2002, 12, 14))
   end
 end
