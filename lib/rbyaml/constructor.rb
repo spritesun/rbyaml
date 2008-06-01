@@ -259,8 +259,8 @@ module RbYAML
     end
 
     BOOL_VALUES = {
-#      "y" =>       true,
-#      "n" =>       false,
+      #      "y" =>       true,
+      #      "n" =>       false,
       "yes" =>     true,
       "no" =>      false,
       "true" =>    true,

@@ -100,11 +100,12 @@ module RbYAML
       while !@parser.peek_event.__is_mapping_end
         key_event = @parser.peek_event
         item_key = compose_node(node,nil)
-        if node.value.include?(item_key)
-          raise ComposerError.new("while composing a mapping","found duplicate key")
+        if @parser.peek_event.__is_mapping_end
+          node.value[item_key] = ScalarNode.new(nil.taguri, "")
+        else
+          item_value = compose_node(node,item_key)
+          node.value[item_key] = item_value #unless node.value.include?(item_key)
         end
-        item_value = compose_node(node,item_key)
-        node.value[item_key] = item_value
       end
       @parser.get_event
       node
