@@ -120,4 +120,24 @@ describe "RbYAML#load" do
   it "should load no time part timestamp as date" do
     "2002-12-14".should load_as(Date.civil(2002, 12, 14))
   end
+
+  it "should load sequence as array, map as hash" do
+    "---\n- foo\n- foo\n- [foo]\n- [foo]\n- {foo: foo}\n- {foo: foo}\n".should load_as(["foo", "foo", ["foo"], ["foo"], { "foo" => "foo"}, { "foo" => "foo"}])
+  end
+
+  it "should load strange nesting successfully" do
+    "---\nfoo: { bar }\n".should load_as({ "foo" => { "bar" => nil}})
+  end
+
+  it "should load uncompleted map smoothly" do
+    "{foo}".should load_as({ "foo" => nil})
+    "{ foo }".should load_as({ "foo" => nil})
+#     "{ foo:}".should load_as({ "foo:" => nil})
+    "{ foo:\n}".should load_as({ "foo" => nil})
+    "{ foo: }".should load_as({ "foo" => nil})
+  end
+
+  it "should load duplicate key/index successfully, the value should be the last declared value" do
+    "{foo: bar, foo: bar2}".should load_as({ "foo" => "bar2"})
+  end
 end
