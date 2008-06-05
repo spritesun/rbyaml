@@ -127,6 +127,8 @@ describe "RbYAML#load" do
 
   it "should load strange nesting successfully" do
     "---\nfoo: { bar }\n".should load_as({ "foo" => { "bar" => nil}})
+    "---\ndefault: \n- a\n".should load_as({ "default" => ["a"]})
+    "---\nfoo: {bar, qux}".should load_as({ "foo" => { "bar" => nil, "qux" => nil}})
   end
 
   it "should load uncompleted map smoothly" do
@@ -135,6 +137,7 @@ describe "RbYAML#load" do
 #     "{ foo:}".should load_as({ "foo:" => nil})
     "{ foo:\n}".should load_as({ "foo" => nil})
     "{ foo: }".should load_as({ "foo" => nil})
+    "{ foo, bar }".should load_as({ "foo" => nil, "bar" => nil})
   end
 
   it "should load duplicate key/index successfully, the value should be the last declared value" do

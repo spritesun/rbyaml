@@ -129,11 +129,11 @@ module RbYAML
       if !@parse_stack.empty?
         while true
           meth = @parse_stack.pop
-#puts "our method: :#{meth}"
-#puts "--- with peeked: :#{@scanner.peek_token.class} #{if @scanner.peek_token.respond_to?(:value): @scanner.peek_token.value.inspect; end}"
+#           puts "our method: :#{meth}"
+#           puts "--- with peeked: :#{@scanner.peek_token.class} #{if @scanner.peek_token.respond_to?(:value): @scanner.peek_token.value.inspect; end}"
           val = send(meth)
           if !val.nil?
-#puts "returning: #{val}"
+#             puts "returning: #{val}"
             return val
           end
         end
@@ -484,7 +484,7 @@ module RbYAML
     end
 
     def flow_mapping
-      @parse_stack += [:flow_mapping_end,:flow_mapping_entry]
+      @parse_stack += [:flow_mapping_end, :flow_mapping_entry]
       flow_mapping_start
     end
 
@@ -513,7 +513,7 @@ module RbYAML
     def flow_internal_value
       if @scanner.peek_token.__is_value
         @scanner.get_token
-        if !(@scanner.peek_token.__is_flow_entry || @scanner.peek_token.__is_flow_sequence_end)
+        unless @scanner.peek_token.__is_flow_entry || @scanner.peek_token.__is_flow_sequence_end
           flow_node
         else
           empty_scalar
@@ -531,12 +531,12 @@ module RbYAML
     end
 
     def flow_mapping_entry
-      if !@scanner.peek_token.__is_flow_mapping_end
+      unless @scanner.peek_token.__is_flow_mapping_end
         if @scanner.peek_token.__is_key
-          @parse_stack += [:flow_mapping_entry,:flow_entry_marker,:flow_mapping_internal_value]
+          @parse_stack += [:flow_mapping_entry, :flow_entry_marker, :flow_mapping_internal_value]
           return flow_mapping_internal_content
         else
-          @parse_stack += [:flow_mapping_entry,:flow_node]
+          @parse_stack += [:flow_mapping_entry, :empty_scalar, :flow_node]
           return flow_entry_marker
         end
       end
@@ -545,7 +545,7 @@ module RbYAML
 
     def flow_mapping_internal_content
       curr = @scanner.peek_token
-      if !(curr.__is_value || curr.__is_flow_entry || curr.__is_flow_mapping_end)
+      unless curr.__is_value || curr.__is_flow_entry || curr.__is_flow_mapping_end
         @scanner.get_token
         flow_node
       else
@@ -556,7 +556,7 @@ module RbYAML
     def flow_mapping_internal_value
       if @scanner.peek_token.__is_value
         @scanner.get_token
-        if !(@scanner.peek_token.__is_flow_entry || @scanner.peek_token.__is_flow_mapping_end)
+        unless @scanner.peek_token.__is_flow_entry || @scanner.peek_token.__is_flow_mapping_end
           flow_node
         else
           empty_scalar
