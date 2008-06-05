@@ -50,7 +50,7 @@ module RbYAML
       end
       event = @parser.peek_event
       anchor = event.anchor
-      if !anchor.nil?
+      unless anchor.nil?
         if @anchors.include?(anchor)
           raise ComposerError.new("found duplicate anchor #{anchor}; first occurence","second occurence")
         end
@@ -100,12 +100,8 @@ module RbYAML
       while !@parser.peek_event.__is_mapping_end
         key_event = @parser.peek_event
         item_key = compose_node(node,nil)
-        if @parser.peek_event.__is_mapping_end
-          node.value[item_key] = ScalarNode.new(nil.taguri, "")
-        else
-          item_value = compose_node(node,item_key)
-          node.value[item_key] = item_value #unless node.value.include?(item_key)
-        end
+        item_value = compose_node(node,item_key)
+        node.value[item_key] = item_value #unless node.value.include?(item_key)
       end
       @parser.get_event
       node
