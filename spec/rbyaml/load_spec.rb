@@ -143,4 +143,12 @@ describe "RbYAML#load" do
   it "should load duplicate key/index successfully, the value should be the last declared value" do
     "{foo: bar, foo: bar2}".should load_as({ "foo" => "bar2"})
   end
+
+  it "could load empty content" do
+    "{foo : !!str\n}".should load_as({ "foo" => ""})
+    "{foo : !!str , !!str : bar,}".should load_as({ "foo" => "", "" => "bar"})
+
+    # Completely empty nodes are only valid when following some explicit indication for their existence.
+    lambda { RbYAML.load("{foo : !!str}") }.should raise_error
+  end
 end

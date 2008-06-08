@@ -6,7 +6,7 @@
 # explicit_document ::= DIRECTIVE* DOCUMENT-START block_node? DOCUMENT-END?
 # implicit_document ::= block_node DOCUMENT-END?
 # block_node    ::= ALIAS | properties? block_content
-# flow_node     ::= ALIAS | properties? flow_content
+# flow_node     ::= ALIAS | properties? flow_content?
 # properties    ::= TAG ANCHOR? | ANCHOR TAG?
 # block_content     ::= block_collection | flow_collection | SCALAR
 # flow_content      ::= flow_collection | SCALAR
@@ -378,7 +378,8 @@ module RbYAML
       elsif token.__is_scalar
         return scalar
       else
-        raise ParserError.new("while scanning a flow node","expected the node content, but found #{token.tid}")
+        return empty_scalar
+#         raise ParserError.new("while scanning a flow node","expected the node content, but found #{token.tid}")
       end
     end
 
@@ -594,7 +595,7 @@ module RbYAML
     end
 
     def process_empty_scalar
-      ScalarEvent.new(nil, nil, [true, false], "")
+      ScalarEvent.new(@anchors.last, @tags.last, [true, false], "")
     end
   end
 end
