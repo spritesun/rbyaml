@@ -101,7 +101,9 @@ module RbYAML
         key_event = @parser.peek_event
         item_key = compose_node(node,nil)
         item_value = compose_node(node,item_key)
-        node.value[item_key] = item_value #unless node.value.include?(item_key)
+        # According to YAML1.1 Specification, section 3.2.1.3, it should raise error, but we give a friendly processing method currently.
+        # raise ComposerError.new("while composing a mapping","found duplicate key") if node.value.include?(item_key)
+        node.value[item_key] = item_value
       end
       @parser.get_event
       node
