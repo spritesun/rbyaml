@@ -358,14 +358,14 @@ module RbYAML
       when ?{: return fetch_flow_mapping_start
       when ?]: return fetch_flow_sequence_end
       when ?}: return fetch_flow_mapping_end
-      when ?,: return fetch_flow_entry
+      when ?,: return fetch_flow_entry if @flow_level != 0
       when ?*: return fetch_alias
       when ?&: return fetch_anchor
       when ?!: return fetch_tag
       when ?|: if @flow_zero: return fetch_literal end
       when ?>: if @flow_zero: return fetch_folded end
       end
-      return fetch_plain if BEG =~ prefix(2)
+      return fetch_plain if BEG =~ prefix(2) || !NULL_BL_T_LINEBR.include?(peek1)
       raise ScannerError.new("while scanning for the next token","found character #{ch.chr}(#{ch}) that cannot start any token")
     end
 

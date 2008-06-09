@@ -151,4 +151,8 @@ describe "RbYAML#load" do
     # Completely empty nodes are only valid when following some explicit indication for their existence.
     lambda { RbYAML.load("{foo : !!str}") }.should raise_error
   end
+
+  it "should load string which include strange characters successfully" do
+    "--- \n,a".should load_as(",a")
+  end
 end
