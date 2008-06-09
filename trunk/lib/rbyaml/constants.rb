@@ -77,6 +77,7 @@ module RbYAML
   END_OR_START = /^(---|\.\.\.)[\0 \t\r\n\x85]$/
   STRANGE_CHR = /[\]\[\-';\/?:@&=+$,.!~*()%\w]/
   HEXA_REG = /[0-9A-Fa-f]/
+  CHOMPING = "+-\n\r0123456789# "
 
   #
   # Default settings

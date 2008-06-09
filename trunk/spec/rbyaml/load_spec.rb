@@ -154,5 +154,7 @@ describe "RbYAML#load" do
 
   it "should load string which include strange characters successfully" do
     "--- \n,a".should load_as(",a")
+    "foobar: >= 123".should load_as({ "foobar" => ">= 123"})
+    "foobar: |= 567".should load_as({ "foobar" => "|= 567"})
   end
 end
