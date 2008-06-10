@@ -334,9 +334,6 @@ module RbYAML
       # Eat whitespaces and comments until we reach the next token.
       scan_to_next_token
 
-      # Remove obsolete possible simple keys.
-#      stale_possible_simple_keys
-
       # Compare the current indentation and column. It may add some tokens
       # and decrease the current indentation level.
       unwind_indent(@column)
@@ -867,7 +864,7 @@ module RbYAML
         breaks, max_indent = scan_block_scalar_indentation
         indent = [min_indent, max_indent].max
       else
-        indent = min_indent+increment-1
+        indent = min_indent + increment-1
         breaks = scan_block_scalar_breaks(indent)
       end
       line_break = ''
@@ -1122,7 +1119,7 @@ module RbYAML
         chunks << prefix(length)
         forward(length)
         spaces = scan_plain_spaces(indent)
-        break if !spaces || (@flow_zero && @column < indent)
+        break if spaces.nil? || (@flow_zero && @column < indent)
       end
       return ScalarToken.new(chunks.to_s, true)
     end

@@ -156,5 +156,7 @@ describe "RbYAML#load" do
     "--- \n,a".should load_as(",a")
     "foobar: >= 123".should load_as({ "foobar" => ">= 123"})
     "foobar: |= 567".should load_as({ "foobar" => "|= 567"})
+    pending # unable to fix following bug
+    "---\nfoo: \tbar".should load_as({ "foo" => "bar"})
   end
 end
