@@ -21,7 +21,7 @@ module RbYAML
   NULL_OR_LINEBR = "\0\r\n\x85"
   ALPHA_REG = /[-0-9A-Za-z_]/
   NULL_BL_LINEBR = "\0 \r\n\x85"
-  NULL_BL_T_LINEBR = NULL_OR_OTHER
+  NULL_BL_T_LINEBR = "\0 \t\r\n\x85"
   NON_ALPHA = /[^-0-9A-Za-z_]/
   NON_ALPHA_OR_NUM = "\0 \t\r\n\x85?:,]}%@`"
   NULL_T_BL_LINEBR = NULL_OR_OTHER

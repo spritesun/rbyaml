@@ -214,7 +214,8 @@ module RbYAML
     end
 
     def block_mapping_end
-      if !@scanner.peek_token.__is_block_end
+      token = @scanner.peek_token
+      if !token.__is_block_end
         raise ParserError.new("while scanning a block mapping","expected <block end>, but found #{token.tid}")
       end
       @scanner.get_token
@@ -423,7 +424,7 @@ module RbYAML
         if @scanner.peek_token.__is_value
           @scanner.get_token
           curr = @scanner.peek_token
-          if !(curr.__is_key || curr.__is_value || curr.__is_block_end)
+          unless curr.__is_key || curr.__is_value || curr.__is_block_end
             return block_node_or_indentless_sequence
           else
             return empty_scalar
