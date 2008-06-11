@@ -159,4 +159,12 @@ describe "RbYAML#load" do
     pending # unable to fix following bug
     "---\nfoo: \tbar".should load_as({ "foo" => "bar"})
   end
+
+  it "could load asterisk" do
+    "--- \n*.rb".should load_as("*.rb")
+    %Q{--- \n'*.rb'}.should load_as("*.rb")
+
+    "--- \n&.rb".should load_as("&.rb")
+    %Q{--- \n'&.rb'}.should load_as("&.rb")
+  end
 end
