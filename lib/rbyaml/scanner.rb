@@ -356,8 +356,8 @@ module RbYAML
       when ?]: return fetch_flow_sequence_end
       when ?}: return fetch_flow_mapping_end
       when ?,: return fetch_flow_entry if !@flow_zero
-      when ?*: return fetch_alias
-      when ?&: return fetch_anchor
+      when ?*: return fetch_alias if ALPHA_REG =~ peek(1).chr
+      when ?&: return fetch_anchor if ALPHA_REG =~ peek(1).chr
       when ?!: return fetch_tag
       when ?|: if @flow_zero && CHOMPING.include?(peek1): return fetch_literal end
       when ?>: if @flow_zero && CHOMPING.include?(peek1): return fetch_folded end
