@@ -6,7 +6,11 @@ class LoadAs #:nodoc:
   end
 
   def matches?(actual_yaml)
-    @actual = RbYAML.load(actual_yaml)
+    begin
+      @actual = RbYAML.load(actual_yaml)
+    rescue Exception => @actual
+      return @actual.is_a?(@expected)
+    end
     @actual == @expected
   end
 
