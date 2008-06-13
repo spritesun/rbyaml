@@ -1,17 +1,8 @@
 require File.join(File.dirname(__FILE__), '..', 'spec_helper.rb')
 
-class LoadAs #:nodoc:
+class SpecMatcher
   def initialize(expected)
     @expected = expected
-  end
-
-  def matches?(actual_yaml)
-    begin
-      @actual = RbYAML.load(actual_yaml)
-    rescue Exception => @actual
-      return @actual.is_a?(@expected)
-    end
-    @actual == @expected
   end
 
   def failure_message
@@ -27,6 +18,17 @@ class LoadAs #:nodoc:
   end
 end
 
+class LoadAs < SpecMatcher
+  def matches?(actual_yaml)
+    begin
+      @actual = RbYAML.load(actual_yaml)
+    rescue Exception => @actual
+      return @actual.is_a?(@expected)
+    end
+    @actual == @expected
+  end
+end
+
 # :call-seq:
 #   should load_as(expected)
 #
@@ -39,4 +41,19 @@ end
 # #   "--- :lock".should load_as(":lock")
 def load_as(expected)
   LoadAs.new(expected)
+end
+
+class DumpAs < SpecMatcher
+  def matches?(actual_yaml)
+    begin
+      @actual = RbYAML.dump(actual_yaml)
+    rescue Exception => @actual
+      return @actual.is_a?(@expected)
+    end
+    @actual == @expected
+  end
+end
+
+def dump_as(expected)
+  DumpAs.new(expected)
 end
