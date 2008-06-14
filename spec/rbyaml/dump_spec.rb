@@ -23,4 +23,12 @@ describe "RbYAML.dump" do
   it "should dump basic string successfully" do
     "str".should dump_as("--- str\n")
   end
+
+  it "could dump basic hash" do
+    { "a" => "b" }.should dump_as("--- \na: b\n")
+  end
+
+  it "could dump basic list" do
+    ["a", "b", "c"].should dump_as("--- \n- a\n- b\n- c\n")
+  end
 end

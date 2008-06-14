@@ -5,6 +5,7 @@ require 'rbyaml/dumper'
 
 module RbYAML
   $current_yaml_version = '1.1'
+
   # Return a Resolver class
   def self.resolver
     Resolver
@@ -26,11 +27,13 @@ module RbYAML
 
   # this operation does not make sense in RbYAML (right now)
   def self.parse( io )
+    raise NotImplementedError
     #    yp = @@parser.new( :Model => :Generic ).load( io )
   end
 
   # this operation does not make sense in RbYAML (right now)
   def self.parse_file( filepath )
+    raise NotImplementedError
     #    File.open( filepath ) do |f|
     #      parse( f )
     #    end
@@ -46,11 +49,13 @@ module RbYAML
 
   # this operation does not make sense in RbYAML (right now)
   def self.each_node( io, &doc_proc )
+    raise NotImplementedError
     #    yp = @@parser.new( :Model => :Generic ).load_documents( io, &doc_proc )
   end
 
   # this operation does not make sense in RbYAML (right now)
   def self.parse_documents( io, &doc_proc )
+    raise NotImplementedError
     #    YAML.each_node( io, &doc_proc )
   end
 
@@ -78,36 +83,43 @@ module RbYAML
 
   # this operation does not make sense in RbYAML (right now)
   def self.add_domain_type( domain, type_re, &transfer_proc )
+    raise NotImplementedError
     #    @@loader.add_domain_type( domain, type_re, &transfer_proc )
   end
 
   # this operation does not make sense in RbYAML (right now)
   def self.add_builtin_type( type_re, &transfer_proc )
+    raise NotImplementedError
     #    @@loader.add_builtin_type( type_re, &transfer_proc )
   end
 
   # this operation does not make sense in RbYAML (right now)
   def self.add_ruby_type( type_tag, &transfer_proc )
+    raise NotImplementedError
     #    @@loader.add_ruby_type( type, &transfer_proc )
   end
 
   # this operation does not make sense in RbYAML (right now)
   def self.add_private_type( type_re, &transfer_proc )
+    raise NotImplementedError
     #    @@loader.add_private_type( type_re, &transfer_proc )
   end
 
   # SimpleDetector uninitialize, need resolver/loader
   def self.detect_implicit( val )
+    raise NotImplementedError
     # SimpleDetector.detect(val)
   end
 
   # this operation does not make sense in RbYAML (right now)
   def self.transfer( type_id, obj )
+    raise NotImplementedError
     #    @@loader.transfer( type_id, obj )
   end
 
   # this operation does not make sense in RbYAML (right now)
   def self.try_implicit( obj )
+    raise NotImplementedError
     #    YAML.transfer( YAML.detect_implicit( obj ), obj )
   end
 
@@ -131,6 +143,7 @@ module RbYAML
 
   # this operation does not make sense in RbYAML (right now)
   def self.quick_emit( oid, opts = {}, &e )
+    raise NotImplementedError
   end
 
   def self.quick_emit_node( oid, rep, &e )
@@ -146,3 +159,6 @@ end
 require 'rbyaml/tag'
 require 'rbyaml/types'
 require 'rbyaml/rubytypes'
+
+
+
