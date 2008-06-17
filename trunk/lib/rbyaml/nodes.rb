@@ -2,6 +2,9 @@
 module RbYAML
   Node = Struct.new(:tag, :value)
   class Node
+    def hash
+      object_id
+    end
     def to_s
       "#{self.class.name}(tag=#{tag}, value=#{value})"
     end

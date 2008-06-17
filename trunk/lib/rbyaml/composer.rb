@@ -100,9 +100,16 @@ module RbYAML
       while !@parser.peek_event.__is_mapping_end
         key_event = @parser.peek_event
         item_key = compose_node(node,nil)
+
+        node.value.each do |key, value|
+          if key.tag == item_key.tag && key.value == item_key.value
+            # According to YAML1.1 Specification, section 3.2.1.3, it should raise error, but we give a friendly processing method currently.
+            # raise ComposerError.new("while composing a mapping","found duplicate key")
+            node.value.delete(key)
+          end
+        end
+
         item_value = compose_node(node,item_key)
-        # According to YAML1.1 Specification, section 3.2.1.3, it should raise error, but we give a friendly processing method currently.
-        # raise ComposerError.new("while composing a mapping","found duplicate key") if node.value.include?(item_key)
         node.value[item_key] = item_value
       end
       @parser.get_event

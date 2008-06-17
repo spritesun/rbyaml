@@ -379,7 +379,7 @@ module RbYAML
       elsif token.__is_scalar
         return scalar
       else
-        return empty_scalar
+        ScalarEvent.new(@anchors.last, @tags.last, [true, false], "", nil)
 #         raise ParserError.new("while scanning a flow node","expected the node content, but found #{token.tid}")
       end
     end
@@ -596,7 +596,7 @@ module RbYAML
     end
 
     def process_empty_scalar
-      ScalarEvent.new(@anchors.last, @tags.last, [true, false], "")
+      ScalarEvent.new(nil, nil, [true, false], "")
     end
   end
 end
