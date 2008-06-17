@@ -20,11 +20,7 @@ end
 
 class LoadAs < SpecMatcher
   def matches?(actual_yaml)
-    begin
-      @actual = RbYAML.load(actual_yaml)
-    rescue Exception => @actual
-      return @actual.is_a?(@expected)
-    end
+    @actual = RbYAML.load(actual_yaml)
     @actual == @expected
   end
 end
@@ -45,11 +41,7 @@ end
 
 class DumpAs < SpecMatcher
   def matches?(actual_yaml)
-    begin
-      @actual = RbYAML.dump(actual_yaml)
-    rescue Exception => @actual
-      return @actual.is_a?(@expected)
-    end
+    @actual = RbYAML.dump(actual_yaml)
     @actual == @expected
   end
 end

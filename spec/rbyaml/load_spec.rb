@@ -149,7 +149,7 @@ describe "RbYAML#load" do
     "{foo : !!str , !!str : bar,}".should load_as({ "foo" => "", "" => "bar"})
 
     # Completely empty nodes are only valid when following some explicit indication for their existence.
-    "{foo : !!str}".should load_as(Exception)
+    lambda { RbYAML.load("{foo : !!str}") }.should raise_error
   end
 
   it "should load string which include strange characters successfully" do
@@ -167,7 +167,7 @@ describe "RbYAML#load" do
     "--- \n&.rb".should load_as("&.rb")
     %Q{--- \n'&.rb'}.should load_as("&.rb")
 
-    "--- \n&r.b".should load_as(Exception)
-    "--- \n*r.b".should load_as(Exception)
+    lambda {RbYAML.load("--- \n&r.b")}.should raise_error
+    lambda {RbYAML.load("--- \n*r.b")}.should raise_error
   end
 end
