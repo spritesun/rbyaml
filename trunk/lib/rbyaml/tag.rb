@@ -45,18 +45,18 @@ end
 
 class Module # :nodoc: all
   def yaml_as( tag, sc = true )
-    class_eval <<-"end;", __FILE__, __LINE__+1
+    class_eval <<-"CLASS_END", __FILE__, __LINE__+1
     attr_writer :taguri
     def taguri
       return @taguri if defined?(@taguri) and @taguri
       tag = #{ tag.dump }
-        if self.class.yaml_tag_subclasses? and self.class != RbYAML::tagged_classes[tag]
+        if self.class.yaml_tag_subclasses? && self.class != RbYAML::tagged_classes[tag]
           tag = "\#{ tag }:\#{ self.class.yaml_tag_class_name }"
         end
       tag
     end
     def self.yaml_tag_subclasses?; #{sc}; end
-    end;
+    CLASS_END
     RbYAML::tag_class tag, self
   end
   # Transforms the subclass name into a name suitable for display
