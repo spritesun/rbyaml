@@ -8,6 +8,9 @@ module RbYAML
     def to_s
       "#{self.class.name}(tag=#{tag}, value=#{value})"
     end
+    def <=>(other)
+        self.value <=> other.value
+    end
 
     def __is_scalar; false; end
     def __is_collection; false; end

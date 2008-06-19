@@ -20,14 +20,14 @@ module RbYAML
       @serializer.serialize(node)
       represented_objects = {}
     end
- 
+
     def represent_data(data)
       if ignore_aliases(data)
         alias_key = nil
       else
         alias_key = data.object_id
       end
-      
+
       if !alias_key.nil?
         if @represented_objects.include?(alias_key)
           node = @represented_objects[alias_key]
@@ -40,7 +40,7 @@ module RbYAML
       @represented_objects[alias_key] = node if !alias_key.nil?
       node
     end
-    
+
     def scalar(tag, value, style=nil)
       represent_scalar(tag,value,style)
     end
@@ -65,7 +65,20 @@ module RbYAML
       SequenceNode.new(tag, value, flow_style)
     end
 
-    def map(tag, mapping, flow_style=nil)
+    def map(tag, *args)
+      if args.length == 1
+        mapping = {}
+        def mapping.add(key, value)
+          self[key] = value
+        end
+        yield mapping
+        flow_style = args.first
+      elsif args.length == 2
+        mapping, flow_style = args
+      else
+        raise ArgumentError, "wrong number of arguments (#{args.length})"
+      end
+
       represent_mapping(tag,mapping,flow_style)
     end
 
