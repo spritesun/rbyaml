@@ -142,8 +142,24 @@ module RbYAML
   end
 
   # this operation does not make sense in RbYAML (right now)
-  def self.quick_emit( oid, opts = {}, &e )
-    raise NotImplementedError
+  def self.quick_emit( oid, opts = {} )
+    if Dumper === opts then
+      rep = opts
+    else
+      stream = StringIO.new
+      dumper = Dumper.new stream, opts
+      dumper.serializer.open
+      rep = dumper.representer
+    end
+
+    node = RbYAML.quick_emit_node oid, rep do |out|
+      yield out
+    end
+
+    dumper.serializer.serialize node
+
+    dumper.serializer.close
+    stream.string
   end
 
   def self.quick_emit_node( oid, rep, &e )

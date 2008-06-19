@@ -79,7 +79,7 @@ module RbYAML
       @last_anchor_id += 1
       @anchor_template % @last_anchor_id
     end
-    
+
     def serialize_node(node,parent,index)
       talias = @anchors[node]
       if @serialized_nodes.include?(node)
@@ -104,7 +104,7 @@ module RbYAML
         elsif MappingNode === node
           implicit = (node.tag == @resolver.resolve(MappingNode, node.value, true))
           @emitter.emit(MappingStartEvent.new(talias, node.tag, implicit,node.flow_style))
-          for key, value in node.value
+          for key, value in node.value.sort
             serialize_node(key,node,nil)
             serialize_node(value,node,key)
           end
