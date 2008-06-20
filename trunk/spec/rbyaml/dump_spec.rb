@@ -41,4 +41,13 @@ describe "RbYAML.dump" do
     RbYAML.dump(1, nil, { :ExplicitTypes => true} ).should == "--- !int 1\n"
     load_yaml
   end
+
+  it "should dump string tag information during the string is integer" do
+    "3.14".should dump_as("--- !!str 3.14\n")
+    "1.0".should dump_as("--- !!str 1.0\n")
+  end
+
+  it "could dump object" do
+    TestBean.new("sprite", 19).should dump_as("--- !ruby/object:TestBean\nage: 19\nname: sprite\n")
+  end
 end

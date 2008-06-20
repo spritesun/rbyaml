@@ -17,3 +17,11 @@ def load_yaml(yaml_version = "1.1")
     end
   end
 end
+
+class TestBean
+  attr_accessor :name, :age
+  def initialize(name = nil, age = nil)
+    @name = name
+    @age = age
+  end
+end
