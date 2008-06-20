@@ -35,4 +35,10 @@ describe "RbYAML.dump" do
   it "should dump tag information during option is explicit type " do
     RbYAML.dump(1, nil, { :ExplicitTypes => true} ).should == "--- !!int 1\n"
   end
+
+  it "should be able to dump yaml 1.0 tag" do
+    load_yaml "1.0"
+    RbYAML.dump(1, nil, { :ExplicitTypes => true} ).should == "--- !int 1\n"
+    load_yaml
+  end
 end
