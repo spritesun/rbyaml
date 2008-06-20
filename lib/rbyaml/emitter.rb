@@ -16,8 +16,13 @@ module RbYAML
 
   class Emitter
     DEFAULT_TAG_PREFIXES = {
-      "!" => "!",
-      "tag:yaml.org,2002:" => "!!"
+      "1.0" => {
+        "tag:yaml.org,2002:" => "!",
+      },
+      "1.1" => {
+        "!" => "!",
+        "tag:yaml.org,2002:" => "!!",
+      }
     }
 
     def initialize(stream, opts={})
@@ -163,7 +168,7 @@ module RbYAML
           version_text = prepare_version(@event.version)
           write_version_directive(version_text)
         end
-        @tag_prefixes = Emitter::DEFAULT_TAG_PREFIXES.dup
+        @tag_prefixes = Emitter::DEFAULT_TAG_PREFIXES[$current_yaml_version].dup
         if @event.tags
           handles = @event.tags.keys
           handles.sort!
