@@ -31,4 +31,8 @@ describe "RbYAML.dump" do
   it "could dump basic list" do
     ["a", "b", "c"].should dump_as("--- \n- a\n- b\n- c\n")
   end
+
+  it "should dump tag information during option is explicit type " do
+    RbYAML.dump(1, nil, { :ExplicitTypes => true} ).should == "--- !!int 1\n"
+  end
 end
