@@ -13,6 +13,7 @@ module RbYAML
       @options = opts
       @use_explicit_start = opts[:ExplicitStart]
       @use_explicit_end = opts[:ExplicitEnd]
+      @explicit_type = opts[:ExplicitTypes]
       @use_version = opts[:UseVersion] && opts[:Version]
       @use_tags = opts[:UseHeader]
       @anchor_template = opts[:AnchorFormat] || "id%03d"
@@ -90,10 +91,14 @@ module RbYAML
         if ScalarNode === node
           detected_tag = @resolver.resolve(ScalarNode, node.value, [true,false])
           default_tag = @resolver.resolve(ScalarNode, node.value, [false,true])
-          implicit = (node.tag == detected_tag), (node.tag == default_tag)
+          if @explicit_type
+            implicit = false, false
+          else
+            implicit = (node.tag == detected_tag), (node.tag == default_tag)
+          end
           @emitter.emit(ScalarEvent.new(talias, node.tag, implicit, node.value,node.style))
         elsif SequenceNode === node
-          implicit = (node.tag == @resolver.resolve(SequenceNode, node.value, true))
+          implicit = !@explicit_type && (node.tag == @resolver.resolve(SequenceNode, node.value, true))
           @emitter.emit(SequenceStartEvent.new(talias, node.tag, implicit,node.flow_style))
           index = 0
           for item in node.value
@@ -102,7 +107,7 @@ module RbYAML
           end
           @emitter.emit(SequenceEndEvent.new)
         elsif MappingNode === node
-          implicit = (node.tag == @resolver.resolve(MappingNode, node.value, true))
+          implicit = !@explicit_type && (node.tag == @resolver.resolve(MappingNode, node.value, true))
           @emitter.emit(MappingStartEvent.new(talias, node.tag, implicit,node.flow_style))
           for key, value in node.value.sort
             serialize_node(key,node,nil)

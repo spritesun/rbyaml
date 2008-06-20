@@ -16,21 +16,21 @@ module RbYAML
       @representer = opts[:Representer].new(@serializer,opts)
     end
   end
-  
+
   class BaseDumper < CommonDumper
-    attr_accessor 
+    attr_accessor
     def initialize(stream,opts={})
       super(stream,DEFAULTS.merge({:Representer=>RbYAML::BaseRepresenter, :Resolver=>RbYAML::BaseResolver}).merge(opts))
     end
   end
-  
+
   class SafeDumper < CommonDumper
     def initialize(stream,opts={})
       super(stream,DEFAULTS.merge({:Representer=>RbYAML::SafeRepresenter}).merge(opts))
       super
     end
   end
-  
+
   class Dumper < CommonDumper
     def initialize(stream,opts={})
       super
