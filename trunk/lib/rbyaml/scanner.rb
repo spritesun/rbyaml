@@ -1026,7 +1026,7 @@ module RbYAML
             if NOT_HEXA =~ prefix(length)
               raise ScannerError.new("while scanning a double-quoted scalar","expected escape sequence of #{length} hexdecimal numbers, but found something else: #{prefix(length)}}")
             end
-            code = prefix(length).to_i(16).to_s
+            code = prefix(length).to_i(16).chr
             chunks << code
             forward(length)
           elsif FULL_LINEBR.include?(ch)
