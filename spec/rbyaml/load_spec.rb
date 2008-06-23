@@ -38,6 +38,11 @@ describe "RbYAML#load" do
     "--- \n str".should load_as(expected)
     %Q{--- 'str'}.should load_as(expected)
     "!!str str".should load_as(expected)
+    "\nstr".should load_as(expected)
+
+    "\xC3\xBC".should load_as("\xC3\xBC")
+    "\"\\xC3\\xBC\"".should load_as("\xC3\xBC")
+    "---\n\"\\xC3\\xBC\"".should load_as("\xC3\xBC")
 
     "!!str 1.0".should load_as("1.0")
   end
