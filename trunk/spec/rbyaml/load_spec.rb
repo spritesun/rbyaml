@@ -161,7 +161,6 @@ describe "RbYAML#load" do
     "--- \n,a".should load_as(",a")
     "foobar: >= 123".should load_as({ "foobar" => ">= 123"})
     "foobar: |= 567".should load_as({ "foobar" => "|= 567"})
-    pending # unable to fix following bug
     "---\nfoo: \tbar".should load_as({ "foo" => "bar"})
   end
 
@@ -174,5 +173,39 @@ describe "RbYAML#load" do
 
     lambda {RbYAML.load("--- \n&r.b")}.should raise_error
     lambda {RbYAML.load("--- \n*r.b")}.should raise_error
+  end
+
+  it "could load integer" do
+    "47".should load_as(47)
+    "0".should load_as(0)
+    "-1".should load_as(-1)
+  end
+
+  it "could load block mapping" do
+    expected = { "a" => "b", "c" => "d"}
+    "a: b\nc: d".should load_as(expected)
+    "c: d\na: b".should load_as(expected)
+  end
+
+  it "could load flow mapping" do
+    expected = { "a" => "b", "c" => "d"}
+    "{a: b, c: d}".should load_as(expected)
+    "{c: d,\na: b}".should load_as(expected)
+  end
+
+  it "could load internal character" do
+    "--- \nbad_sample: something:(\n".should load_as({ "bad_sample" => "something:(" })
+  end
+
+  it "should load no blank mapping block as string" do
+    "a:b".should load_as("a:b")
+    "---\na: b(".should load_as({ "a" => "b(" })
+    "---\na: b:c".should load_as({ "a" => "b:c" })
+    pending
+    "---\na: b:".should load_as({ "a" => "b:" })
+  end
+
+  it "should load nest mapping" do
+    "a:\n - b\n - c".should load_as({ "a" => ["b", "c"] })
   end
 end
