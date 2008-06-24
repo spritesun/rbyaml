@@ -400,7 +400,7 @@ module RbYAML
 
       # In the flow context, indentation is ignored. We make the scanner less
       # restrictive then specification requires.
-      return nil if !@flow_zero
+      return nil unless @flow_zero
       # In block context, we may need to issue the BLOCK-END tokens.
       while @indent > col
         @indent = @indents.pop
@@ -562,13 +562,11 @@ module RbYAML
         # Block context needs additional checks.
         # (Do we really need them? They will be catched by the parser
         # anyway.)
-        if @flow_zero
-          # We are allowed to start a complex value if and only if
-          # we can start a simple key.
-          raise ScannerError.new(nil,"mapping values are not allowed here") if !@allow_simple_key
-          # Simple keys are allowed after ':' in the block context.
-          @allow_simple_key = true
-        end
+        # We are allowed to start a complex value if and only if
+        # we can start a simple key.
+        raise ScannerError.new(nil,"mapping values are not allowed here") if @flow_zero && !@allow_simple_key
+        # Simple keys are allowed after ':' in the block context.
+        @allow_simple_key = @flow_zero
       else
         # Add KEY.
         @possible_simple_keys.delete(@flow_level)
@@ -675,7 +673,7 @@ module RbYAML
       # `unwind_indent` before issuing BLOCK-END.
       # Scanners for block, flow, and plain scalars need to be modified.
       while true
-        while peek0 == 32
+        while peek0.chr == " " || peek0.chr == "\t"
           forward1
         end
         if peek0 == ?#

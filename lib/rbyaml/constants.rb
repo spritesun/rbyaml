@@ -71,9 +71,9 @@ module RbYAML
   SPACES_AND_STUFF = "'\"\\\0 \t\r\n\x85"
   DOUBLE_ESC = "\"\\"
   NOT_HEXA = /[^0-9A-Fa-f]/
-  R_flowzero = /[\0 \t\r\n\x85]|(:[\0 \t\r\n\x28])/
+  R_flowzero = /[\0 \t\r\n\x85]|(:[\0 \t\r\n])/
   R_flownonzero = /[\0 \t\r\n\x85\[\]{},:?]/
-  S4 = "\0 \t\r\n\x28[]{}"
+  S4 = "\0 \t\r\n[]{}"
   END_OR_START = /^(---|\.\.\.)[\0 \t\r\n\x85]$/
   STRANGE_CHR = /[\]\[\-';\/?:@&=+$,.!~*()%\w]/
   HEXA_REG = /[0-9A-Fa-f]/
