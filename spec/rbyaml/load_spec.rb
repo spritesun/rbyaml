@@ -195,13 +195,14 @@ describe "RbYAML#load" do
 
   it "could load internal character" do
     "--- \nbad_sample: something:(\n".should load_as({ "bad_sample" => "something:(" })
+    "--- \nbad_sample: something:".should load_as({ "bad_sample" => "something:" })
+    lambda { RbYAML.load("--- \nbad_sample: something:\n") }.should raise_error
   end
 
   it "should load no blank mapping block as string" do
     "a:b".should load_as("a:b")
     "---\na: b(".should load_as({ "a" => "b(" })
     "---\na: b:c".should load_as({ "a" => "b:c" })
-    pending
     "---\na: b:".should load_as({ "a" => "b:" })
   end
 
