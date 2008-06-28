@@ -348,7 +348,7 @@ module RbYAML
       when ?": return fetch_double
       when ??: if !@flow_zero || NULL_OR_OTHER.include?(peek1): return fetch_key end
       when ?:: if !@flow_zero || NULL_OR_OTHER.include?(peek1): return fetch_value end
-      when ?%: if colz: return fetch_stream_end end
+      when ?%: if colz: return fetch_directive end
       when ?-: if colz && ENDING =~ prefix(4): return fetch_document_start; elsif NULL_OR_OTHER.include?(peek1): return fetch_block_entry end
       when ?.: if colz && START =~ prefix(4): return fetch_document_end end
       when ?[: return fetch_flow_sequence_start

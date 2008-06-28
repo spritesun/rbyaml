@@ -209,4 +209,14 @@ describe "RbYAML#load" do
   it "should load nest mapping" do
     "a:\n - b\n - c".should load_as({ "a" => ["b", "c"] })
   end
+
+  it "could load builtin tag" do
+    expected = "str"
+    "!!str str".should load_as(expected)
+    "%YAML 1.1\n---\n!!str str".should load_as(expected)
+    "%YAML 1.0\n---\n!str str".should load_as(expected)
+    lambda { RbYAML.load("%YAML 2.0\n---\n!!str str") }.should raise_error
+    pending
+    "%YAML 1.2\n---\n!!str str".should load_as(expected)
+  end
 end
