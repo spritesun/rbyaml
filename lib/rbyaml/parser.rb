@@ -129,11 +129,11 @@ module RbYAML
       if !@parse_stack.empty?
         while true
           meth = @parse_stack.pop
-#           puts "our method: :#{meth}"
-#           puts "--- with peeked: :#{@scanner.peek_token.class} #{if @scanner.peek_token.respond_to?(:value): @scanner.peek_token.value.inspect; end}"
+          #           puts "our method: :#{meth}"
+          #           puts "--- with peeked: :#{@scanner.peek_token.class} #{if @scanner.peek_token.respond_to?(:value): @scanner.peek_token.value.inspect; end}"
           val = send(meth)
           if !val.nil?
-#             puts "returning: #{val}"
+            #             puts "returning: #{val}"
             return val
           end
         end
@@ -144,7 +144,7 @@ module RbYAML
       end
     end
 
-#TERMINALS, definitions
+    #TERMINALS, definitions
 
     def stream_start
       @scanner.get_token
@@ -270,7 +270,7 @@ module RbYAML
     end
 
 
-# PRODUCTIONS
+    # PRODUCTIONS
     def stream
       @parse_stack += [:stream_end, :explicit_document, :implicit_document]
       stream_start
@@ -380,7 +380,7 @@ module RbYAML
         return scalar
       else
         ScalarEvent.new(@anchors.last, @tags.last, [true, false], "", nil)
-#         raise ParserError.new("while scanning a flow node","expected the node content, but found #{token.tid}")
+        #         raise ParserError.new("while scanning a flow node","expected the node content, but found #{token.tid}")
       end
     end
 
@@ -574,10 +574,11 @@ module RbYAML
       while @scanner.peek_token.__is_directive
         token = @scanner.get_token
         if token.name == "YAML"
-          raise ParserError.new(nil,"found duplicate YAML directive") if !@yaml_version.nil?
+          raise ParserError.new(nil,"found duplicate YAML directive") unless @yaml_version.nil?
           major, minor = token.value[0].to_i, token.value[1].to_i
           raise ParserError.new(nil,"found incompatible YAML document (version 1.* is required)") if major != 1
           @yaml_version = [major,minor]
+          tags = DEFAULT_TAGS[token.value[0] + "." + token.value[1]]
         elsif token.name == "TAG"
           handle, prefix = token.value
           raise ParserError.new(nil,"duplicate tag handle #{handle}") if @tag_handles.member?(handle)
@@ -589,7 +590,8 @@ module RbYAML
       else
         value = @yaml_version, nil
       end
-      DEFAULT_TAGS[$current_yaml_version].each do |key, value|
+      tags ||= DEFAULT_TAGS[$current_yaml_version]
+      tags.each do |key, value|
         @tag_handles[key] = value if !@tag_handles.include?(key)
       end
       value
