@@ -216,6 +216,11 @@ describe "RbYAML#load" do
     "%YAML 1.1\n---\n!!str str".should load_as(expected)
     "%YAML 1.0\n---\n!str str".should load_as(expected)
     "%YAML 1.2\n---\n!!str str".should load_as(expected)
-    lambda { RbYAML.load("%YAML 2.0\n---\n!!str str") }.should raise_error
+    lambda { RbYAML.load("%YAML 1.1\n%YAML 1.1\n--- !!str str") }.should raise_error(RbYAML::ParserError, "found duplicate YAML directive")
+    lambda { RbYAML.load("%YAML 2.0\n---\n!!str str") }.should raise_error(RbYAML::ParserError, "found incompatible YAML document (version 1.* is required)")
+  end
+
+  it "could load ruby object" do
+    "--- !ruby/object:TestBean\nname: spritesun\nage: 20\nborn: 1988-06-27\n".should load_as(TestBean.new("spritesun", 20, Date.civil(1988, 6, 27)))
   end
 end

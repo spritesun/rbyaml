@@ -48,6 +48,6 @@ describe "RbYAML.dump" do
   end
 
   it "could dump object" do
-    TestBean.new("sprite", 19).should dump_as("--- !ruby/object:TestBean\nage: 19\nname: sprite\n")
+    TestBean.new("sprite", 19, Date.civil(1988, 6, 27)).should dump_as("--- !ruby/object:TestBean\nage: 19\nborn: 1988-06-27\nname: sprite\n")
   end
 end

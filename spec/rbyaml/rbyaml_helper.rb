@@ -6,11 +6,11 @@ class SpecMatcher
   end
 
   def failure_message
-    "expected #{@expected.inspect}, got #{@actual.inspect} (using .equal?)"
+    "expected #{@expected.inspect}, got #{@actual.inspect} (using ==)"
   end
 
   def negative_failure_message
-    "expected #{@actual.inspect} not to equal #{@expected.inspect} (using .equal?)"
+    "expected #{@actual.inspect} not to equal #{@expected.inspect} (using ==)"
   end
 
   def description
