@@ -19,9 +19,14 @@ def load_yaml(yaml_version = "1.1")
 end
 
 class TestBean
-  attr_accessor :name, :age
-  def initialize(name = nil, age = nil)
+  attr_accessor :name, :age, :born
+  def initialize(name = nil, age = nil, born = nil)
     @name = name
     @age = age
+    @born = born
+  end
+
+  def == (other)
+    @name == other.name && @age == other.age && @born == other.born
   end
 end
