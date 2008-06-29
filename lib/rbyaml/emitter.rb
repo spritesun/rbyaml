@@ -168,7 +168,7 @@ module RbYAML
           version_text = prepare_version(@event.version)
           write_version_directive(version_text)
         end
-        @tag_prefixes = Emitter::DEFAULT_TAG_PREFIXES[$current_yaml_version].dup
+        @tag_prefixes = Emitter::DEFAULT_TAG_PREFIXES[$global_yaml_version].dup
         if @event.tags
           handles = @event.tags.keys
           handles.sort!

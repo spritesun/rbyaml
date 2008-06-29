@@ -215,8 +215,7 @@ describe "RbYAML#load" do
     "!!str str".should load_as(expected)
     "%YAML 1.1\n---\n!!str str".should load_as(expected)
     "%YAML 1.0\n---\n!str str".should load_as(expected)
-    lambda { RbYAML.load("%YAML 2.0\n---\n!!str str") }.should raise_error
-    pending
     "%YAML 1.2\n---\n!!str str".should load_as(expected)
+    lambda { RbYAML.load("%YAML 2.0\n---\n!!str str") }.should raise_error
   end
 end
