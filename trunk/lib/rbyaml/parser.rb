@@ -578,7 +578,8 @@ module RbYAML
           major, minor = token.value[0].to_i, token.value[1].to_i
           raise ParserError.new(nil,"found incompatible YAML document (version 1.* is required)") if major != 1
           @yaml_version = [major,minor]
-          tags = DEFAULT_TAGS[token.value[0] + "." + token.value[1]]
+          tags = DEFAULT_TAGS["#{major}.#{minor}"]
+          warn "\nwanrning: doesn't support version #{major}.#{minor}, will parse as version #{$global_yaml_version}" if tags.nil?
         elsif token.name == "TAG"
           handle, prefix = token.value
           raise ParserError.new(nil,"duplicate tag handle #{handle}") if @tag_handles.member?(handle)
@@ -590,7 +591,7 @@ module RbYAML
       else
         value = @yaml_version, nil
       end
-      tags ||= DEFAULT_TAGS[$current_yaml_version]
+      tags ||= DEFAULT_TAGS[$global_yaml_version]
       tags.each do |key, value|
         @tag_handles[key] = value if !@tag_handles.include?(key)
       end
