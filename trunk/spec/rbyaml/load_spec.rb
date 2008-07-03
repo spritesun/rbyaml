@@ -139,7 +139,7 @@ describe "RbYAML#load" do
   it "should load uncompleted map smoothly" do
     "{foo}".should load_as({ "foo" => nil})
     "{ foo }".should load_as({ "foo" => nil})
-#     "{ foo:}".should load_as({ "foo:" => nil})
+    #     "{ foo:}".should load_as({ "foo:" => nil})
     "{ foo:\n}".should load_as({ "foo" => nil})
     "{ foo: }".should load_as({ "foo" => nil})
     "{ foo, bar }".should load_as({ "foo" => nil, "bar" => nil})
@@ -223,4 +223,18 @@ describe "RbYAML#load" do
   it "could load ruby object" do
     "--- !ruby/object:TestBean\nname: spritesun\nage: 20\nborn: 1988-06-27\n".should load_as(TestBean.new("spritesun", 20, Date.civil(1988, 6, 27)))
   end
+
+  it "should not be changed after dump and load" do
+    "C VW\u0085\u000B\u00D1XU\u00E6".should_not be_changed_after_dump_and_load
+    "\n8 xwKmjHG".should_not be_changed_after_dump_and_load
+    "1jq[\205qIB\ns".should_not be_changed_after_dump_and_load
+  end
+
+  it "could load block chomping indicator" do
+    "|-\n\na\n\n".should load_as("\na")
+    "|+\n\na\n\n".should load_as("\na\n\n")
+    pending
+    "|\n\na\n\n".should load_as("\na\n")
+  end
+
 end

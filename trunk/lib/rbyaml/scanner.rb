@@ -857,7 +857,7 @@ module RbYAML
       scan_block_scalar_ignored_line
       # Determine the indentation level and go to the first non-empty line.
       min_indent = @indent+1
-      min_indent = 1 if min_indent < 1
+      min_indent = 0 if min_indent < 0
       if increment.nil?
         breaks, max_indent = scan_block_scalar_indentation
         indent = [min_indent, max_indent].max
