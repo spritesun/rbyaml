@@ -12,7 +12,7 @@ module RbYAML
   class EmitterError < YAMLError
   end
 
-  ScalarAnalysis = Struct.new(:scalar,:empty,:multiline,:allow_flow_plain,:allow_block_plain,:allow_single_quoted,:allow_double_quoted,:allow_block)
+  ScalarAnalysis = Struct.new(:scalar,:empty,:multiline,:allow_flow_plain,:allow_block_plain,:allow_single_quoted,:allow_double_quoted,:allow_block, :special_characters)
 
   class Emitter
     DEFAULT_TAG_PREFIXES = {
@@ -517,6 +517,7 @@ module RbYAML
       end
       return @event.style if @event.style && /^[|>]$/ =~ @event.style && @flow_level==0 && @analysis.allow_block
       return "'" if (!@event.style || @event.style == "'") && (@analysis.allow_single_quoted && !(@simple_key_context && @analysis.multiline))
+      return "|" if @analysis.multiline &&!@analysis.special_characters
       return '"'
     end
 
@@ -595,7 +596,7 @@ module RbYAML
 
     def analyze_scalar(scalar)
       # Empty scalar is a special case.
-      return ScalarAnalysis.new(scalar,true,false,false,true,true,true,false) if scalar.nil? || scalar.empty?
+      return ScalarAnalysis.new(scalar,true,false,false,true,true,true,false,false) if scalar.nil? || scalar.empty?
       # Indicators and special characters.
       block_indicators = false
       flow_indicators = false
@@ -748,7 +749,7 @@ module RbYAML
       allow_block = true
       # Leading and trailing whitespace are bad for plain scalars. We also
       # do not want to mess with leading whitespaces for block scalars.
-      allow_flow_plain = allow_block_plain = allow_block = false if leading_spaces || leading_breaks || trailing_spaces
+      allow_flow_plain = allow_block_plain = allow_block = allow_single_quoted = false if leading_spaces || leading_breaks || trailing_spaces
 
       # Trailing breaks are fine for block scalars, but unacceptable for
       # plain scalars.
@@ -775,7 +776,7 @@ module RbYAML
       # Block indicators are forbidden for block plain scalars.
       allow_block_plain = false if block_indicators
 
-      ScalarAnalysis.new(scalar,false,line_breaks,allow_flow_plain,allow_block_plain,allow_single_quoted,allow_double_quoted,allow_block)
+      ScalarAnalysis.new(scalar,false,line_breaks,allow_flow_plain,allow_block_plain,allow_single_quoted,allow_double_quoted,allow_block, special_characters)
     end
 
     # Writers.

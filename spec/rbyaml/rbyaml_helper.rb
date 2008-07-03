@@ -10,7 +10,7 @@ class SpecMatcher
   end
 
   def negative_failure_message
-    "expected #{@actual.inspect} not to equal #{@expected.inspect} (using ==)"
+    "expected #{@expected.inspect}, got #{@actual.inspect} (using ==)"
   end
 
   def description
@@ -48,4 +48,19 @@ end
 
 def dump_as(expected)
   DumpAs.new(expected)
+end
+
+class BeChangedAfterDumpAndLoad < SpecMatcher
+  def initialize
+  end
+
+  def matches?(orginal_stream)
+    @expected = orginal_stream
+    @actual = RbYAML.load(RbYAML.dump(orginal_stream))
+    @actual != @expected
+  end
+end
+
+def be_changed_after_dump_and_load
+  BeChangedAfterDumpAndLoad.new
 end
