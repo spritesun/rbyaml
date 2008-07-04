@@ -902,9 +902,13 @@ module RbYAML
       end
 
       # Chomp the tail.
-      if chomping
+      if chomping == ?+
         chunks << line_break
         chunks += breaks
+      elsif chomping.nil?
+        chunks << line_break
+      elsif chomping == ?-
+        #do_nothing
       end
 
       # We are done.
@@ -917,7 +921,7 @@ module RbYAML
       increment = nil
       ch = peek0
       if PLUS_MIN =~ ch.chr
-        chomping = ch == ?+
+        chomping = ch
         forward1
         ch = peek0
         if ch.__is_ascii_num
@@ -931,7 +935,7 @@ module RbYAML
         forward1
         ch = peek0
         if PLUS_MIN =~ ch.chr
-          chomping = ch == ?+
+          chomping = ch
           forward1
         end
       end

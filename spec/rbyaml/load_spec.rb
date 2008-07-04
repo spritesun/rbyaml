@@ -232,9 +232,9 @@ describe "RbYAML#load" do
 
   it "could load block chomping indicator" do
     "|-\n\na\n\n".should load_as("\na")
-    "|+\n\na\n\n".should load_as("\na\n\n")
-    pending
     "|\n\na\n\n".should load_as("\na\n")
+    "|\n\na".should load_as("\na")
+    "|+\n\na\n\n".should load_as("\na\n\n")
   end
 
 end
