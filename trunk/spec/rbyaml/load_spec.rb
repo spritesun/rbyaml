@@ -228,6 +228,8 @@ describe "RbYAML#load" do
     "C VW\u0085\u000B\u00D1XU\u00E6".should_not be_changed_after_dump_and_load
     "\n8 xwKmjHG".should_not be_changed_after_dump_and_load
     "1jq[\205qIB\ns".should_not be_changed_after_dump_and_load
+    "\rj\230fso\304\nEE".should_not be_changed_after_dump_and_load
+    "ks]qkYM\2073Un\317\nL\346Yp\204 CKMfFcRDFZ\u000BMNk\302fQDR<R\u000B \314QUa\234P\237s aLJnAu \345\262Wqm_W\241\277J\256ILKpPNsMPuok".should_not be_changed_after_dump_and_load
   end
 
   it "could load block chomping indicator" do
@@ -235,6 +237,13 @@ describe "RbYAML#load" do
     "|\n\na\n\n".should load_as("\na\n")
     "|\n\na".should load_as("\na")
     "|+\n\na\n\n".should load_as("\na\n\n")
+
+    ">-\n\n".should load_as("")
+    ">\n\n".should load_as("")
+    "|+\n\n".should load_as("\n")
+
+    "|+\n".should load_as("")
+    "|+\n\n\n".should load_as("\n\n")
   end
 
 end
