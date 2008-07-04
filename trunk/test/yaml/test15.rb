@@ -8,5 +8,5 @@ stats: |
   65 Home Runs
   0.278 Batting Average
 EDN
-  EXPECTED = {"name"=>"Mark McGwire", "accomplishment"=>"Mark set a major league home run record in 1998.", "stats"=>"65 Home Runs\n0.278 Batting Average"}
+  EXPECTED = {"name"=>"Mark McGwire", "accomplishment"=>"Mark set a major league home run record in 1998.\n", "stats"=>"65 Home Runs\n0.278 Batting Average\n"}
 end

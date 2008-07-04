@@ -5,5 +5,5 @@ module YAMLTestCase12
   \//||\/||
   // ||  ||__
 EDN
-  EXPECTED = "//||/||\n// ||  ||__"
+  EXPECTED = "//||/||\n// ||  ||__\n"
 end
