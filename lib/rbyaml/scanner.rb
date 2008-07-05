@@ -1011,7 +1011,7 @@ module RbYAML
         end
         ch = peek0
         if !double && ch == ?' && peek1 == ?'
-          chunks << ?'
+          chunks << ?'.chr
           forward2
         elsif (double && ch == ?') || (!double && DOUBLE_ESC.include?(ch))
           chunks << ch
