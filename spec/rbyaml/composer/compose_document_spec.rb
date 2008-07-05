@@ -1,10 +1,6 @@
 require File.join(File.dirname(__FILE__), 'composer_helper')
 
 describe "RbYAML:Composer#compose_document" do
-  before :each do
-    @sym_composer = RbYAML::Composer.new_by_string(":sym")
-    @int_composer = RbYAML::Composer.new_by_string("12")
-  end
 
   it "should get symbol node when compose by symbol string" do
     node = ":sym".compose_to_node
@@ -23,6 +19,7 @@ describe "RbYAML:Composer#compose_document" do
     node.tag.should == "tag:yaml.org,2002:null"
     node.value.should == ""
   end
+
 end
 
 class String

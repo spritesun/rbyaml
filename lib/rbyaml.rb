@@ -6,11 +6,6 @@ require 'rbyaml/dumper'
 module RbYAML
   $global_yaml_version = '1.1'
 
-  # Return a Resolver class
-  def self.resolver
-    Resolver
-  end
-
   def self.dump(obj, io = nil, opts={})
     _dump(obj,io,Dumper,opts)
   end
@@ -27,7 +22,8 @@ module RbYAML
 
   # this operation does not make sense in RbYAML (right now)
   def self.parse( io )
-    raise NotImplementedError
+    Loader.new(io).composer.get_node
+#     raise NotImplementedError
     #    yp = @@parser.new( :Model => :Generic ).load( io )
   end
 
@@ -168,7 +164,7 @@ module RbYAML
 
   # Convert a type_id to a taguri
   def self.tagurize(val)
-    resolver.tagurize(val)
+    Resolver.tagurize(val)
   end
 end
 
