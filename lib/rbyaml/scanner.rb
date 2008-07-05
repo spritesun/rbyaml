@@ -1014,7 +1014,7 @@ module RbYAML
           chunks << ?'.chr
           forward2
         elsif (double && ch == ?') || (!double && DOUBLE_ESC.include?(ch))
-          chunks << ch
+          chunks << ch.chr
           forward1
         elsif double && ch == ?\\
           forward1

@@ -232,11 +232,9 @@ describe "RbYAML#load" do
     "ks]qkYM\2073Un\317\nL\346Yp\204 CKMfFcRDFZ\u000BMNk\302fQDR<R\u000B \314QUa\234P\237s aLJnAu \345\262Wqm_W\241\277J\256ILKpPNsMPuok".should_not be_changed_after_dump_and_load
     39.chr.should_not be_changed_after_dump_and_load
 
-    pending
     complete_string = ""
     (1..255).each { |i| complete_string << i.chr}
     complete_string.should_not be_changed_after_dump_and_load
-#     puts RbYAML.load(RbYAML.dump(complete_string)) == complete_string
   end
 
   it "could load block chomping indicator" do
@@ -253,8 +251,9 @@ describe "RbYAML#load" do
     "|+\n\n\n".should load_as("\n\n")
   end
 
-  it "could load single quote" do
-    "''''".should load_as(39.chr)
+  it "could load quote" do
+    %Q{''''}.should load_as(39.chr)
+    %Q{'\"'}.should load_as("\"")
   end
 
 end
