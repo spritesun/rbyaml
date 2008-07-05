@@ -5,11 +5,17 @@ module RbYAML
     def hash
       object_id
     end
+
     def to_s
       "#{self.class.name}(tag=#{tag}, value=#{value})"
     end
+
     def <=>(other)
         self.value <=> other.value
+    end
+
+    def transform
+      Constructor.new(nil).construct_document(self)
     end
 
     def __is_scalar; false; end
