@@ -237,6 +237,12 @@ describe "RbYAML#load" do
     complete_string.should_not be_changed_after_dump_and_load
   end
 
+  it "could round load and dump symbol" do
+    :foo.should_not be_changed_after_dump_and_load
+    :"foo".should_not be_changed_after_dump_and_load
+    :"^foo".should_not be_changed_after_dump_and_load
+  end
+
   it "could load block chomping indicator" do
     "|-\n\na\n\n".should load_as("\na")
     "|\n\na\n\n".should load_as("\na\n")

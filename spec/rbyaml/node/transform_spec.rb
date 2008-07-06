@@ -2,7 +2,10 @@ require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
 
 describe "Node#transform" do
   it "should transform string scalar node to string" do
-    text = "chengderong"
-    RbYAML::ScalarNode.new(String.new.taguri, text).transform.should == text
+    RbYAML::ScalarNode.new(String.new.taguri, "chengderong").transform.should == "chengderong"
+  end
+
+  it "could transform symbol" do
+    RbYAML::ScalarNode.new(RbYAML.tagurize("sym"), ":\"^foo\"").transform.should == :"^foo"
   end
 end
