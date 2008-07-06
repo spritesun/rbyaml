@@ -5,4 +5,5 @@ describe "RbYAML::Constructor#construct_document" do
     constructor = RbYAML::Constructor.new_by_string("--- :sym")
     constructor.construct_document(constructor.composer.get_node).should == :sym
   end
+
 end

@@ -403,7 +403,11 @@ module RbYAML
     end
 
     def construct_yaml_sym(node)
-      str(node).sub(":", "").to_sym
+      value = str(node).sub(":", "")
+      if value[0] == ?" && value[-1] == ?"
+        value = value[1...-1]
+      end
+      value.to_sym
     end
 
     def construct_yaml_seq(node)
