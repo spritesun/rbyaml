@@ -18,19 +18,19 @@ module RbYAML
       @constructor = constructor.new(@composer)
     end
   end
-  
+
   class BaseLoader < CommonLoader
     def initialize(stream)
       super(stream,Scanner,Parser,Composer,BaseConstructor,BaseResolver)
     end
   end
-  
+
   class SafeLoader < CommonLoader
     def initialize(stream)
       super(stream,Scanner,Parser,Composer,SafeConstructor,Resolver)
     end
   end
-  
+
   class Loader < CommonLoader
     def initialize(stream)
       super(stream,Scanner,Parser,Composer,Constructor,Resolver)

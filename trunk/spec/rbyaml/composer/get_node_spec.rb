@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'composer_helper')
 
-describe "RbYAML:Composer#get_node" do
+describe "RbYAML::Composer#get_node" do
   it "should get symbol node when compose by symbol string " do
     node = RbYAML::Composer.new_by_string("--- :sym").get_node
     node.value.should == ":sym"

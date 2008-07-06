@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
 
-describe "BaseResolver#tagurize" do
+describe "RbYAML::BaseResolver#tagurize" do
   before :all do
     BaseResolver = RbYAML::BaseResolver
   end

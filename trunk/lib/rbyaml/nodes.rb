@@ -1,3 +1,4 @@
+require 'rbyaml/ypath'
 
 module RbYAML
   Node = Struct.new(:tag, :value)

@@ -2,7 +2,7 @@
 # Distributed under BSD License
 require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
 
-describe "BaseResolver#resolve" do
+describe "RbYAML::BaseResolver#resolve" do
   before(:all) do
     @br = RbYAML::BaseResolver.new
     @br.descend_resolver(nil, nil)
