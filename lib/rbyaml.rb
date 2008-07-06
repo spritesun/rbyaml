@@ -1,4 +1,3 @@
-
 require 'rbyaml/yaml'
 require 'rbyaml/stream'
 require 'rbyaml/dumper'
