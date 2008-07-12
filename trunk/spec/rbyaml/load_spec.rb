@@ -262,4 +262,14 @@ describe "RbYAML#load" do
     %Q{'\"'}.should load_as("\"")
   end
 
+  it "could load sequence key and value" do
+    pending
+    "--- \n? - 1\n  - 2\n: - 3\n  - 4\n".should load_as({ [1, 2] => [3, 4] })
+  end
+
+  it "should ignore underline but not comma during load integer & float" do
+    "1,000".should_not load_as(1000)
+    "1_000".should load_as(1000)
+  end
+
 end
