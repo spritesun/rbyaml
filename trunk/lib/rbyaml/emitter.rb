@@ -544,6 +544,7 @@ module RbYAML
 
     def prepare_version(version)
       major, minor = version
+      p major
       raise EmitterError.new("unsupported YAML version: #{major}.#{minor}") if major != 1
       "#{major}.#{minor}"
     end
