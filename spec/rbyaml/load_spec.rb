@@ -271,7 +271,6 @@ describe "RbYAML#load" do
   end
 
   it "should load able to parse taguri as yaml 1.0" do
-    pending
     load_yaml "1.0"
 
     authorityName = "domain.tld"
@@ -280,7 +279,7 @@ describe "RbYAML#load" do
     specific = "type0"
     value = "just a value"
 
-    "!tag:#{domain}:#{specific} #{value}".should load_as(RbYAML::DomainType.new(domain, specific, value))
+    "!#{domain}/#{specific} #{value}".should load_as(RbYAML::DomainType.new(domain, specific, value))
   end
 
 end

@@ -10,4 +10,5 @@ class RbYAML::Constructor
     @composer = RbYAML::Composer.new(parser,resolver)
     new(@composer)
   end
+
 end

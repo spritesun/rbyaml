@@ -172,6 +172,11 @@ module RbYAML
       PrivateType.new(node.tag,node.value)
     end
 
+    def construct_domain_type(node)
+      domain, type = node.tag.sub("tag:", "").split(":")
+      DomainType.new(domain, type, node.value)
+    end
+
     def seq(node)
       raise ConstructorError.new(nil,"expected a sequence node, but found #{node.tid}") if !node.__is_sequence
       node.value.map {|child| construct_object(child) }
@@ -443,7 +448,9 @@ module RbYAML
   SafeConstructor.add_constructor('tag:yaml.org,2002:seq',:construct_yaml_seq)
   SafeConstructor.add_constructor('tag:yaml.org,2002:map',:construct_yaml_map)
   SafeConstructor.add_constructor('tag:yaml.org,2002:sym', :construct_yaml_sym)
-  SafeConstructor.add_constructor(nil,:construct_private_type)
+  SafeConstructor.add_constructor(nil,:construct_domain_type)
+#   SafeConstructor.add_constructor(nil,:construct_private_type)
+
 
   class Constructor < SafeConstructor
     @@yaml_main_constructors = {}
