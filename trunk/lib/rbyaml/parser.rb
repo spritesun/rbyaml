@@ -337,7 +337,11 @@ module RbYAML
         handle, suffix = tag
         if !handle.nil?
           raise ParserError.new("while parsing a node","found undefined tag handle #{handle}") if !@tag_handles.include?(handle)
-          tag = @tag_handles[handle]+suffix
+          if $global_yaml_version == "1.0" && suffix.include?("/")
+            tag = "tag:" + suffix.sub("/", ":")
+          else
+            tag = @tag_handles[handle]+suffix
+          end
         else
           tag = suffix
         end
@@ -592,8 +596,8 @@ module RbYAML
         value = @yaml_version, nil
       end
       tags ||= DEFAULT_TAGS[$global_yaml_version]
-      tags.each do |key, value|
-        @tag_handles[key] = value if !@tag_handles.include?(key)
+      tags.each do |key, val|
+        @tag_handles[key] = val if !@tag_handles.include?(key)
       end
       value
     end

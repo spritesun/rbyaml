@@ -64,3 +64,11 @@ end
 def be_changed_after_dump_and_load
   BeChangedAfterDumpAndLoad.new
 end
+
+module RbYAML
+  class DomainType
+    def == (obj)
+      obj.domain == @domain && obj.type_id == @type_id && obj.value == @value
+    end
+  end
+end
