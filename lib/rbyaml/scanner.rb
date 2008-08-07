@@ -1193,14 +1193,14 @@ module RbYAML
       length = 0
       ch = peek(length)
       while  STRANGE_CHR =~ ch.chr
-        if ch == ?%
-          chunks << prefix(length)
-          forward(length)
-          length = 0
-          chunks << scan_uri_escapes(name)
-        else
-          length += 1
-        end
+#         if ch == ?%
+#           chunks << prefix(length)
+#           forward(length)
+#           length = 0
+#           chunks << scan_uri_escapes(name)
+#         else
+        length += 1
+#         end
         ch = peek(length)
       end
       if length!=0
