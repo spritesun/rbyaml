@@ -726,7 +726,7 @@ EOY
                 assert_parse_only(
                         { 'same' => [ 'ONE: value', 'ONE: value' ], 'different' => [ 'TWO: value' ] }, <<EOY
 same:
-  - !domain.tld,2002/type\\x30 value
+  - !domain.tld,2002/type\x30 value
   - !domain.tld,2002/type0 value
 different: # As far as the RbYAML parser is concerned
   - !domain.tld,2002/type%30 value
