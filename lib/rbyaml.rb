@@ -78,7 +78,7 @@ module RbYAML
 
   # this operation does not make sense in RbYAML (right now)
   def self.add_domain_type( domain, type_re, &transfer_proc )
-    raise NotImplementedError
+    BaseConstructor::add_constructor("tag:#{domain}:#{type_re}", transfer_proc)
     #    @@loader.add_domain_type( domain, type_re, &transfer_proc )
   end
 
