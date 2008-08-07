@@ -135,8 +135,10 @@ module RbYAML
             end
           end
         end
+      elsif constructor.is_a? Proc # this condition always means it's an application adding tag
+        data = constructor.__call(node.tag, node.value)
       end
-      data = constructor.__call(self,node)
+      data ||= constructor.__call(self,node)
       @constructed_objects[node].value = data
       @constructed_objects[node] = data
       data
@@ -449,7 +451,7 @@ module RbYAML
   SafeConstructor.add_constructor('tag:yaml.org,2002:map',:construct_yaml_map)
   SafeConstructor.add_constructor('tag:yaml.org,2002:sym', :construct_yaml_sym)
   SafeConstructor.add_constructor(nil,:construct_domain_type)
-#   SafeConstructor.add_constructor(nil,:construct_private_type)
+  #   SafeConstructor.add_constructor(nil,:construct_private_type)
 
 
   class Constructor < SafeConstructor
