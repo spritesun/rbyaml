@@ -169,17 +169,18 @@ module RbYAML
           write_version_directive(version_text)
         end
         @tag_prefixes = Emitter::DEFAULT_TAG_PREFIXES[$global_yaml_version].dup
-        if @event.tags
-          handles = @event.tags.keys
-          handles.sort!
-          for handle in handles
-            prefix = @event.tags[handle]
-            @tag_prefixes[prefix] = handle
-            handle_text = prepare_tag_handle(handle)
-            prefix_text = prepare_tag_prefix(prefix)
-            write_tag_directive(handle_text, prefix_text)
-          end
-        end
+#         if @event.tags
+#           p @event
+#           handles = @event.tags.keys
+#           handles.sorto!
+#           for handle in handles
+#             prefix = @event.tags[handle]
+#             @tag_prefixes[prefix] = handle
+#             handle_text = prepare_tag_handle(handle)
+#             prefix_text = prepare_tag_prefix(prefix)
+#             write_tag_directive(handle_text, prefix_text)
+#           end
+#         end
         implicit = first && !@event.explicit && !@canonical && !@event.version && !@event.tags && !check_empty_document
         if !implicit
           write_indent
@@ -543,9 +544,8 @@ module RbYAML
     # Analyzers.
 
     def prepare_version(version)
-      major, minor = version
-      p major
-      raise EmitterError.new("unsupported YAML version: #{major}.#{minor}") if major != 1
+      major, minor = version.split(".")
+      raise EmitterError.new("unsupported YAML version: #{major}.#{minor}") if major.to_i != 1
       "#{major}.#{minor}"
     end
 

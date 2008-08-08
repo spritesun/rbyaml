@@ -55,4 +55,7 @@ describe "RbYAML.dump" do
     "\nabc".should dump_as("--- |-\n  \n  abc\n")
   end
 
+  it "could dump by options" do
+     RbYAML.dump(:some, nil, :UseVersion => true, :UseHeader => true).should load_as(:some)
+  end
 end
