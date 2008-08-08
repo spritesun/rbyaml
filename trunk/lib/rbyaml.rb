@@ -28,10 +28,9 @@ module RbYAML
 
   # this operation does not make sense in RbYAML (right now)
   def self.parse_file( filepath )
-    raise NotImplementedError
-    #    File.open( filepath ) do |f|
-    #      parse( f )
-    #    end
+    File.open( filepath ) do |f|
+      parse( f )
+    end
   end
 
   def self.each_document( io, &block )
