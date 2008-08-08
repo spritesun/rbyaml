@@ -43,8 +43,7 @@ module RbYAML
 
   # this operation does not make sense in RbYAML (right now)
   def self.each_node( io, &doc_proc )
-    raise NotImplementedError
-    #    yp = @@parser.new( :Model => :Generic ).load_documents( io, &doc_proc )
+    doc_proc.call(self.parse(io))
   end
 
   # this operation does not make sense in RbYAML (right now)
