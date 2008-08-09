@@ -48,8 +48,7 @@ module RbYAML
 
   # this operation does not make sense in RbYAML (right now)
   def self.parse_documents( io, &doc_proc )
-    raise NotImplementedError
-    #    YAML.each_node( io, &doc_proc )
+    self.each_node( io, &doc_proc )
   end
 
   def self.load_stream( io )
