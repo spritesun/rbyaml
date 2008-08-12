@@ -301,10 +301,10 @@ module RbYAML
       return false
     end
 
-    def peek_token
+    def peek_token(index = 0)
       # Return the next token, but do not delete if from the queue.
       fetch_more_tokens while need_more_tokens
-      return @tokens[0] unless @tokens.empty?
+      return @tokens.size < (index + 1) ? nil : @tokens[index]
     end
 
     def get_token
@@ -325,9 +325,9 @@ module RbYAML
       end
     end
 
-    def need_more_tokens
+    def need_more_tokens(size = 1)
       return false if @done
-      @tokens.empty? || next_possible_simple_key == @tokens_taken
+      @tokens.size < size || next_possible_simple_key == @tokens_taken
     end
 
     def fetch_more_tokens

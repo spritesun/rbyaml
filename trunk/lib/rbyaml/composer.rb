@@ -49,12 +49,12 @@ module RbYAML
         return @anchors[anchor]
       end
       event = @parser.peek_event
-      anchor = event.anchor
-      unless anchor.nil?
-        if @anchors.include?(anchor)
-          raise ComposerError.new("found duplicate anchor #{anchor}; first occurence","second occurence")
-        end
-      end
+      anchor = event.anchor if event.__is_node
+#       unless anchor.nil?
+#         if @anchors.include?(anchor)
+#           raise ComposerError.new("found duplicate anchor #{anchor}; first occurence","second occurence")
+#         end
+#       end
       @resolver.descend_resolver(parent,index)
       if @parser.peek_event.__is_scalar
         node = compose_scalar_node(anchor)
