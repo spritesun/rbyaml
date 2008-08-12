@@ -282,4 +282,9 @@ describe "RbYAML#load" do
     "!#{domain}/#{specific} #{value}".should load_as(RbYAML::DomainType.new(domain, specific, value))
   end
 
+  it "could load block mapping" do
+    pending
+    "? a\n: b".should load_as({ "a" => "b"})
+  end
+
 end

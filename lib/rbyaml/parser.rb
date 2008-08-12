@@ -129,11 +129,11 @@ module RbYAML
       if !@parse_stack.empty?
         while true
           meth = @parse_stack.pop
-          #           puts "our method: :#{meth}"
-          #           puts "--- with peeked: :#{@scanner.peek_token.class} #{if @scanner.peek_token.respond_to?(:value): @scanner.peek_token.value.inspect; end}"
+#           puts "our method: :#{meth}"
+#           puts "--- with peeked: :#{@scanner.peek_token.class} #{if @scanner.peek_token.respond_to?(:value): @scanner.peek_token.value.inspect; end}"
           val = send(meth)
           if !val.nil?
-            #             puts "returning: #{val}"
+#             puts "returning: #{val}"
             return val
           end
         end
