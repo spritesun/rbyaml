@@ -287,4 +287,18 @@ describe "RbYAML#load" do
     "? a\n: b".should load_as({ "a" => "b"})
   end
 
+  it "could load recursive array" do
+    recursive_array = []
+    recursive_array[0]  = 1
+    recursive_array[1]  = recursive_array
+    # can not use == recursive array itself, so use == its inspect
+    RbYAML.load("--- &id001 \n- 1\n- *id001\n").inspect.should == recursive_array.inspect
+  end
+
+  it "could load recursive hash" do
+    recursive_map = { }
+    recursive_map[recursive_map] = recursive_map
+    # can not use == for recursive hash itself, so use == for its inspect
+    RbYAML.load("--- &id001 \n*id001: *id001\n").inspect.should == recursive_map.inspect
+  end
 end

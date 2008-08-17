@@ -98,14 +98,12 @@ module RbYAML
       def class
         @value.class
       end
-      def to_s
-        @value.to_s
-      end
     end
 
     def construct_object(node)
       return @constructed_objects[node] if @constructed_objects.include?(node)
-      @constructed_objects[node] = RecursiveProxy.new
+      @constructed_objects[node] =
+        @constructed_objects[node] = RecursiveProxy.new
       constructor = get_yaml_constructor(node.tag)
       if !constructor
         ruby_cls = RbYAML::tagged_classes[node.tag]
@@ -138,10 +136,28 @@ module RbYAML
       elsif constructor.is_a? Proc # this condition always means it's an application adding tag
         data = constructor.__call(node.tag, node.value)
       end
-      data ||= constructor.__call(self,node)
+      data ||= constructor.__call(self, node)
       @constructed_objects[node].value = data
       @constructed_objects[node] = data
+      transform_recursive_proxy_to_recursive_object(data)
       data
+    end
+
+    def transform_recursive_proxy_to_recursive_object(itself)
+      if itself.instance_of?(Array)
+        itself.each_index { |index| itself[index] = itself if itself[index].instance_of?(RecursiveProxy) }
+      elsif itself.instance_of?(Hash)
+        itself.each do |key, value|
+          if key.instance_of?(RecursiveProxy)
+            itself[itself] = value
+            itself.delete(key)
+            key = itself
+          end
+          if value.instance_of?(RecursiveProxy)
+            itself[key] = itself
+          end
+        end
+      end
     end
 
     def construct_primitive(node)
