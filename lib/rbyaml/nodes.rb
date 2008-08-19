@@ -23,6 +23,9 @@ module RbYAML
     def __is_collection; false; end
     def __is_sequence; false; end
     def __is_mapping; false; end
+    def __is_recursive
+      false
+    end
   end
 
   class ScalarNode < Node
@@ -61,6 +64,14 @@ module RbYAML
       "mapping"
     end
     def __is_mapping; true; end
+  end
+
+  class RecursiveNode < CollectionNode
+    def initialize
+    end
+    def __is_recursive
+      true
+    end
   end
 end
 
