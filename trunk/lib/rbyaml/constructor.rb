@@ -92,9 +92,9 @@ module RbYAML
 
     class RecursiveProxy
       attr_writer :value
-      def method_missing(*args)
-        @value.send(*args)
-      end
+#       def method_missing(*args)
+#         @value.send(*args)
+#       end
       def class
         @value.class
       end

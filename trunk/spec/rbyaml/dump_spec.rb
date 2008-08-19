@@ -58,4 +58,12 @@ describe "RbYAML.dump" do
   it "could dump by options" do
      RbYAML.dump(:some, nil, :UseVersion => true, :UseHeader => true).should load_as(:some)
   end
+
+  it "could dump recursive array" do
+    recursive_array = []
+    recursive_array[0] = recursive_array
+
+    recursive_array.should dump_as("--- &id001\n- *id001\n")
+  end
+
 end

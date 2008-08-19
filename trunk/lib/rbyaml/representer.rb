@@ -31,14 +31,24 @@ module RbYAML
       if !alias_key.nil?
         if @represented_objects.include?(alias_key)
           node = @represented_objects[alias_key]
-          raise RepresenterError.new("recursive objects are not allowed: #{data}") if node.nil?
+          node ||= RecursiveNode.new
+          #           raise RepresenterError.new("recursive objects are not allowed: #{data}") if node.nil?
           return node
         end
         @represented_objects[alias_key] = nil
       end
       node = data.to_yaml_node(self)
       @represented_objects[alias_key] = node if !alias_key.nil?
+      transform_recursive_node(node)
       node
+    end
+
+    def transform_recursive_node(itself)
+      if itself.instance_of?(SequenceNode)
+        itself.value.each_index do |node_item_index|
+          itself.value[node_item_index] = itself if itself.value[node_item_index].instance_of?(RecursiveNode)
+        end
+      end
     end
 
     def scalar(tag, value, style=nil)
