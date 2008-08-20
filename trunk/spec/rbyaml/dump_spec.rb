@@ -59,16 +59,20 @@ describe "RbYAML.dump" do
     RbYAML.dump(:some, nil, :UseVersion => true, :UseHeader => true).should load_as(:some)
   end
 
+  it "could dump by options during version1.0" do
+    load_yaml "1.0"
+    obj = { "1" => 2 }
+    RbYAML.dump(obj, nil, :UseVersion => true, :UseHeader => true, :SortKeys => true ).should == "%YAML 1.0\n--- \n!str 1: 2\n"
+  end
+
   it "could dump recursive array" do
-    recursive_array = []
-    recursive_array[0] = recursive_array
+    recursive_array = []; recursive_array[0] = recursive_array
 
     recursive_array.should dump_as("--- &id001\n- *id001\n")
   end
 
   it "could dump recursive map" do
-    recursive_map = { }
-    recursive_map[recursive_map] = recursive_map
+    recursive_map = { }; recursive_map[recursive_map] = recursive_map
 
     recursive_map.should dump_as("--- &id001\n*id001: *id001\n")
   end

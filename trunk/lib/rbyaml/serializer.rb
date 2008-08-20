@@ -14,7 +14,8 @@ module RbYAML
       @use_explicit_start = opts[:ExplicitStart]
       @use_explicit_end = opts[:ExplicitEnd]
       @explicit_type = opts[:ExplicitTypes]
-      @use_version = opts[:UseVersion] && opts[:Version]
+      # Currently, :Version doesn't make any sense
+      @use_version = opts[:UseVersion] && $global_yaml_version
       @use_tags = opts[:UseHeader]
       @anchor_template = opts[:AnchorFormat] || "id%03d"
       @serialized_nodes = {}
@@ -49,7 +50,7 @@ module RbYAML
       elsif @closed
         raise SerializerError.new("serializer is closed")
       end
-      @emitter.emit(DocumentStartEvent.new(@use_explicit_start,@use_version,@use_tags))
+      @emitter.emit(DocumentStartEvent.new(@use_explicit_start,@use_version,nil))
       anchor_node(node)
       serialize_node(node,nil,nil)
       @emitter.emit(DocumentEndEvent.new(@use_explicit_end))
