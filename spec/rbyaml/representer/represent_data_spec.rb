@@ -2,8 +2,7 @@ require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
 
 describe "RbYAML::Representer#represent_data" do
   it "should return recursive sequence node when represent recursive array" do
-    recursive_array = []
-    recursive_array[0] = recursive_array
+    recursive_array = []; recursive_array[0] = recursive_array
     representer = RbYAML::Representer.new(nil)
 
     recursive_seq_node = representer.represent_data(recursive_array)
@@ -13,9 +12,7 @@ describe "RbYAML::Representer#represent_data" do
   end
 
   it "could return deep recursive array" do
-    deep_recursive_array = []
-    deep_recursive_array[0] = []
-    deep_recursive_array[0][0] = deep_recursive_array
+    deep_recursive_array = []; deep_recursive_array[0] = []; deep_recursive_array[0][0] = deep_recursive_array
     representer = RbYAML::Representer.new(nil)
 
     deep_recursive_seq_node = representer.represent_data(deep_recursive_array)
@@ -26,8 +23,7 @@ describe "RbYAML::Representer#represent_data" do
   end
 
   it "should return recursive mappingnode when represent recursive map" do
-    recursive_map = { }
-    recursive_map[recursive_map] = recursive_map
+    recursive_map = { }; recursive_map[recursive_map] = recursive_map
     representer = RbYAML::Representer.new(nil)
 
     recursive_map_node = representer.represent_data(recursive_map)
