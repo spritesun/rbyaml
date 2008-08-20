@@ -26,15 +26,23 @@ describe "RbYAML::Representer#represent_data" do
   end
 
   it "should return recursive mappingnode when represent recursive map" do
-    pending
+    recursive_map = { }
+    recursive_map[recursive_map] = recursive_map
+    representer = RbYAML::Representer.new(nil)
+
+    recursive_map_node = representer.represent_data(recursive_map)
+    recursive_map_node.class.should == RbYAML::MappingNode
+    recursive_map_node.value.keys[0].should == recursive_map_node.itself
+    recursive_map_node.value.values[0].should == recursive_map_node.itself
   end
 
 end
 
 module RbYAML
-  class SequenceNode
+  class CollectionNode
     def itself
       self
     end
   end
+
 end
