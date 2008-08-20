@@ -301,4 +301,5 @@ describe "RbYAML#load" do
     # can not use == for recursive hash itself, so use == for its inspect
     RbYAML.load("--- &id001 \n*id001: *id001\n").inspect.should == recursive_map.inspect
   end
+
 end

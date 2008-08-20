@@ -32,7 +32,6 @@ module RbYAML
         if @represented_objects.include?(alias_key)
           node = @represented_objects[alias_key]
           node ||= RecursiveNode.new
-          #           raise RepresenterError.new("recursive objects are not allowed: #{data}") if node.nil?
           return node
         end
         @represented_objects[alias_key] = nil
@@ -47,6 +46,17 @@ module RbYAML
       if itself.instance_of?(SequenceNode)
         itself.value.each_index do |node_item_index|
           itself.value[node_item_index] = itself if itself.value[node_item_index].instance_of?(RecursiveNode)
+        end
+      elsif itself.instance_of?(MappingNode)
+        itself.value.each do |key, value|
+          if key.instance_of?(RecursiveNode)
+            itself.value[itself] = value
+            itself.value.delete(key)
+            key = itself
+          end
+          if value.instance_of?(RecursiveNode)
+            itself.value[key] = itself
+          end
         end
       end
     end
