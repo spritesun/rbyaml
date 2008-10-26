@@ -214,8 +214,8 @@ describe "RbYAML#load" do
     "%YAML 1.1\n---\n!!str str".should load_as(expected)
     "%YAML 1.0\n---\n!str str".should load_as(expected)
     "%YAML 1.2\n---\n!!str str".should load_as(expected)
-    lambda { RbYAML.load("%YAML 1.1\n%YAML 1.1\n--- !!str str") }.should raise_error(RbYAML::ParserError, "found duplicate YAML directive")
-    lambda { RbYAML.load("%YAML 2.0\n---\n!!str str") }.should raise_error(RbYAML::ParserError, "found incompatible YAML document (version 1.* is required)")
+    lambda { RbYAML.load("%YAML 1.1\n%YAML 1.1\n--- !!str str") }.should raise_error(ParserError, "found duplicate YAML directive")
+    lambda { RbYAML.load("%YAML 2.0\n---\n!!str str") }.should raise_error(ParserError, "found incompatible YAML document (version 1.* is required)")
   end
 
   it "could load ruby object" do
@@ -279,7 +279,7 @@ describe "RbYAML#load" do
     specific = "type0"
     value = "just a value"
 
-    "!#{domain}/#{specific} #{value}".should load_as(RbYAML::DomainType.new(domain, specific, value))
+    "!#{domain}/#{specific} #{value}".should load_as(DomainType.new(domain, specific, value))
   end
 
   it "could load block mapping" do

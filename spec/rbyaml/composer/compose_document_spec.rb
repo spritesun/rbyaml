@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'composer_helper')
 
-describe "RbYAML::Composer#compose_document" do
+describe "Composer#compose_document" do
 
   after :each do
     load_yaml
@@ -38,6 +38,6 @@ end
 
 class String
   def compose_to_node
-    RbYAML::Composer.new_by_string(self).compose_document
+    Composer.new_by_string(self).compose_document
   end
 end

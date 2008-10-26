@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'composer_helper')
 
-describe "RbYAML::Composer#get_node" do
+describe "Composer#get_node" do
 
   before :all do
     SYM_TAG = RbYAML.tagurize("sym")
@@ -8,25 +8,25 @@ describe "RbYAML::Composer#get_node" do
   end
 
   it "should get symbol node when compose by symbol string " do
-    node = RbYAML::Composer.new_by_string("--- :sym").get_node
+    node = Composer.new_by_string("--- :sym").get_node
     node.value.should == ":sym"
     node.tag.should == SYM_TAG
   end
 
   it "could escape characters" do
-    node = RbYAML::Composer.new_by_string("\xC3\xBC").get_node
+    node = Composer.new_by_string("\xC3\xBC").get_node
     node.value.should == "\xC3\xBC"
     node.tag.should == STR_TAG
   end
 
   it "should not escape 8-bit unicode to decimal number" do
-    node = RbYAML::Composer.new_by_string("\"\\xC3\\xBC\"").get_node
+    node = Composer.new_by_string("\"\\xC3\\xBC\"").get_node
     node.value.should == "\xC3\xBC"
     node.tag.should == STR_TAG
   end
 
   it "could get node by symbol" do
-    node = RbYAML::Composer.new_by_string("--- :\"^foo\"\n").get_node
+    node = Composer.new_by_string("--- :\"^foo\"\n").get_node
     node.value.should == ":\"^foo\""
     node.tag.should == SYM_TAG
   end

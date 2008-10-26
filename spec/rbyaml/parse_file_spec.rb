@@ -10,7 +10,7 @@ describe "RbYAML#parse_file" do
       RbYAML.dump("some", io )
     end
 
-    RbYAML.parse_file($test_file).should == RbYAML::ScalarNode.new(String.new.taguri, "some")
+    RbYAML.parse_file($test_file).should == ScalarNode.new(String.new.taguri, "some")
   end
 
 end
