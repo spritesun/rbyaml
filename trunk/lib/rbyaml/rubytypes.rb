@@ -16,7 +16,6 @@ class Class
 end
 
 class Object
-  yaml_as "tag:ruby.yaml.org,2002:object"
   def is_complex_yaml?; true; end
   def to_yaml_style; end
   def to_yaml_properties; instance_variables.sort; end
@@ -38,7 +37,6 @@ class Object
 end
 
 class Hash
-  yaml_as "tag:ruby.yaml.org,2002:hash"
   yaml_as "tag:yaml.org,2002:map"
   def is_complex_yaml?; true; end
   def yaml_initialize( tag, val )
@@ -113,7 +111,6 @@ class Struct
 end
 
 class Array
-  yaml_as "tag:ruby.yaml.org,2002:array"
   yaml_as "tag:yaml.org,2002:seq"
   def is_complex_yaml?; true; end
   def yaml_initialize( tag, val ); concat( val.to_a ); end
@@ -146,8 +143,6 @@ class Exception
 end
 
 class String
-  yaml_as "tag:ruby.yaml.org,2002:string"
-  yaml_as "tag:yaml.org,2002:binary"
   yaml_as "tag:yaml.org,2002:str"
   def is_complex_yaml?
     to_yaml_style or not to_yaml_properties.empty? or self =~ /\n.+/
@@ -189,7 +184,6 @@ class String
 end
 
 class Symbol
-  yaml_as "tag:ruby.yaml.org,2002:symbol"
   yaml_as "tag:yaml.org,2002:sym"
   def is_complex_yaml?; false; end
   def Symbol.yaml_new( klass, tag, val )
@@ -295,7 +289,6 @@ class Regexp
 end
 
 class Time
-  yaml_as "tag:ruby.yaml.org,2002:time"
   yaml_as "tag:yaml.org,2002:timestamp"
   def is_complex_yaml?; false; end
   def Time.yaml_new( klass, tag, val )
