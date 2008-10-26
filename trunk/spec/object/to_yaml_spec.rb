@@ -12,4 +12,8 @@ describe "Object#to_yaml" do
   it "should parse string to YAML representation" do
     "this is a string".to_yaml.should == "--- this is a string\n"
   end
+
+  it "should has to_yaml method" do
+    Hash.instance_methods(false).should include("to_yaml")
+  end
 end
