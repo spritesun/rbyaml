@@ -1,8 +1,8 @@
 require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
 
-describe "RbYAML::BaseResolver#tagurize" do
+describe "BaseResolver#tagurize" do
   before :all do
-    BaseResolver = RbYAML::BaseResolver
+    BaseResolver = BaseResolver
   end
 
   it "should do nothing when tagurize non-string object" do

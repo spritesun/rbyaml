@@ -1,13 +1,13 @@
 require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
 
-class RbYAML::Constructor
+class Constructor
   attr_reader :composer
 
   def self.new_by_string yaml_string
-    scanner = RbYAML::Scanner.new(yaml_string)
-    parser = RbYAML::Parser.new(scanner)
-    resolver = RbYAML::Resolver.new
-    @composer = RbYAML::Composer.new(parser,resolver)
+    scanner = Scanner.new(yaml_string)
+    parser = Parser.new(scanner)
+    resolver = Resolver.new
+    @composer = Composer.new(parser,resolver)
     new(@composer)
   end
 

@@ -1,9 +1,9 @@
 require File.join(File.dirname(__FILE__), 'constructor_helper.rb')
 
-describe "RbYAML::Constructor#construct_yaml_sym" do
+describe "Constructor#construct_yaml_sym" do
 
   before :all do
-    @constructor = RbYAML::Constructor.new(nil)
+    @constructor = Constructor.new(nil)
   end
 
   it "should get symbol value when node is symbol" do
@@ -25,5 +25,5 @@ describe "RbYAML::Constructor#construct_yaml_sym" do
 end
 
 def new_sym_node stream
-  RbYAML::ScalarNode.new(RbYAML.tagurize("sym"), stream)
+  ScalarNode.new(RbYAML.tagurize("sym"), stream)
 end
