@@ -56,17 +56,17 @@ class Module # :nodoc: all
       tag
     end
     def self.yaml_tag_subclasses?; #{sc}; end
-    CLASS_END
-    RbYAML::tag_class tag, self
-  end
-  # Transforms the subclass name into a name suitable for display
+      CLASS_END
+      RbYAML::tag_class tag, self
+    end
+    # Transforms the subclass name into a name suitable for display
     # in a subclassed tag.
-  def yaml_tag_class_name
-    self.name
+    def yaml_tag_class_name
+      self.name
+    end
+    # Transforms the subclass name found in the tag into a Ruby
+    # constant name.
+    def yaml_tag_read_class( name )
+      name
+    end
   end
-  # Transforms the subclass name found in the tag into a Ruby
-  # constant name.
-  def yaml_tag_read_class( name )
-    name
-  end
-end

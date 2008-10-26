@@ -65,7 +65,7 @@ module RbYAML
       # Formatting details.
       @canonical = opts[:Canonical]
       @best_indent = 2
-      @best_indent = opts[:Indent] if 2...10 === opts[:Indent]
+      @best_indent = opts[:Indent] if opts[:Indent].between?(2, 9)
 
       @best_width = 80
       @best_width = opts[:BestWidth] if opts[:BestWidth] != 0 && opts[:BestWidth] > @best_indent*2

@@ -13,6 +13,7 @@ module RbYAML
       @serializer = serializer
       @default_style = opts[:UseDouble] ? '"' : (opts[:UseSingle] ? "'" : nil)
       @represented_objects = {}
+      @flow_default_style = nil
     end
 
     def represent(data)
