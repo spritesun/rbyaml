@@ -7,7 +7,6 @@ require File.join(File.dirname(__FILE__), "rbyaml_helper")
 describe "RbYAML#load" do
   after :each do
     File.delete $test_file if File.exist? $test_file
-    load_yaml
   end
 
   it "should return a document from current io stream when io provided" do
@@ -48,13 +47,6 @@ describe "RbYAML#load" do
     "!!str 1.0".should load_as("1.0")
   end
 
-  it "should load !str as application tag in YAML1.0" do
-    load_yaml "1.0"
-
-    "!str str".should load_as("str")
-    "!str 1.0".should load_as("1.0")
-  end
-
   it "should load Array successfully" do
     expected = ["a", "b", "c"]
     "--- \n- a\n- b\n- c\n".should load_as(expected)
@@ -65,9 +57,6 @@ describe "RbYAML#load" do
   it "should load string with empty value as empty string" do
     "---\n!!str".should load_as(String.new)
     "---\n- !!str\n- :symbol".should load_as([String.new, :symbol])
-
-    load_yaml "1.0"
-    "---\n!str".should load_as(String.new)
   end
 
   it "should load empty yaml file as nil" do
@@ -268,18 +257,6 @@ describe "RbYAML#load" do
   it "should ignore underline but not comma during load integer & float" do
     "1,000".should_not load_as(1000)
     "1_000".should load_as(1000)
-  end
-
-  it "should load able to parse taguri as yaml 1.0" do
-    load_yaml "1.0"
-
-    authorityName = "domain.tld"
-    date = "2002"
-    domain = "#{authorityName},#{date}"
-    specific = "type0"
-    value = "just a value"
-
-    "!#{domain}/#{specific} #{value}".should load_as(DomainType.new(domain, specific, value))
   end
 
   it "could load block mapping" do

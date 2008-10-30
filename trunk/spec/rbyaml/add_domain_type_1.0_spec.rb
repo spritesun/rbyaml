@@ -1,13 +1,12 @@
 require File.join(File.dirname(__FILE__), "rbyaml_helper")
 
 describe "RbYAML#add_domain_type" do
-  before :each do
-    # Currently add_domain_type doesn't make any sense to YAML 1.1
-    load_yaml "1.0"
+  before :all do
+    $global_yaml_version = "1.0"
   end
 
-  after :each do
-    load_yaml
+  after :all do
+    $global_yaml_version = "1.1"
   end
 
   it "should call binding proc when loading domain type which had been added before" do
