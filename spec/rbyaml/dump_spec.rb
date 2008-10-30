@@ -36,12 +36,6 @@ describe "RbYAML.dump" do
     RbYAML.dump(1, nil, { :ExplicitTypes => true} ).should == "--- !!int 1\n"
   end
 
-  it "should be able to dump yaml 1.0 tag" do
-    load_yaml "1.0"
-    RbYAML.dump(1, nil, { :ExplicitTypes => true} ).should == "--- !int 1\n"
-    load_yaml
-  end
-
   it "should dump string tag information during the string is integer" do
     "3.14".should dump_as("--- !!str 3.14\n")
     "1.0".should dump_as("--- !!str 1.0\n")
@@ -57,12 +51,6 @@ describe "RbYAML.dump" do
 
   it "could dump by options" do
     RbYAML.dump(:some, nil, :UseVersion => true, :UseHeader => true).should load_as(:some)
-  end
-
-  it "could dump by options during version1.0" do
-    load_yaml "1.0"
-    obj = { "1" => 2 }
-    RbYAML.dump(obj, nil, :UseVersion => true, :UseHeader => true, :SortKeys => true ).should == "%YAML 1.0\n--- \n!str 1: 2\n"
   end
 
   it "could dump recursive array" do

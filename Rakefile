@@ -13,5 +13,5 @@ end
 
 Spec::Rake::SpecTask.new do |task|
   task.spec_files = FileList['spec/**/*_spec.rb']
-  #   task.warning = true
+  task.warning = true
 end

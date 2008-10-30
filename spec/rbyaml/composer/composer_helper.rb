@@ -8,3 +8,9 @@ class Composer
     new(parser,resolver)
   end
 end
+
+class String
+  def compose_to_node
+    Composer.new_by_string(self).compose_document
+  end
+end
