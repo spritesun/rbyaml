@@ -1,7 +1,13 @@
-lib_dir = File.join(File.dirname(__FILE__), '..', 'lib')
-$:.unshift(lib_dir) unless $:.include?(lib_dir)
+unless defined?(BASE_DIR)
+  BASE_DIR = File.dirname(__FILE__)
+  LIB_DIR = File.join(File.dirname(__FILE__), "..", "lib")
+  $:.unshift(LIB_DIR) unless $:.include?(LIB_DIR)
 
-require 'rbyaml'
-include RbYAML
+  require 'rbyaml'
+  require File.join(BASE_DIR, 'rspec_extension')
 
-$test_file = "/tmp/rbyaml_test.yml"
+  include RbYAML
+  include RSpecExtension
+
+  $test_file = "/tmp/rbyaml_test.yml"
+end
