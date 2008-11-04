@@ -22,7 +22,7 @@ describe "BaseResolver#resolve" do
   end
 
   it "resolves bool" do
-    @br.resolve(ScalarNode, "true", @implicit).should == 'tag:yaml.org,2002:bool'
+    no_warning @br.resolve(ScalarNode, "true", @implicit).should == 'tag:yaml.org,2002:bool'
     @br.resolve(ScalarNode, "false", @implicit).should == 'tag:yaml.org,2002:bool'
   end
 
@@ -32,7 +32,7 @@ describe "BaseResolver#resolve" do
 
   it "resolves int" do
     # Fixnum
-    @br.resolve(ScalarNode, "800", @implicit).should == 'tag:yaml.org,2002:int'
+    no_warning @br.resolve(ScalarNode, "800", @implicit).should == 'tag:yaml.org,2002:int'
     # Bignum
     @br.resolve(ScalarNode, "599999999", @implicit).should == 'tag:yaml.org,2002:int'
   end
@@ -42,8 +42,8 @@ describe "BaseResolver#resolve" do
   end
 
   it "resolves null" do
-    @br.resolve(ScalarNode, "", @implicit).should == 'tag:yaml.org,2002:null'
-    @br.resolve(ScalarNode, "~", @implicit).should == 'tag:yaml.org,2002:null'
+    no_warning @br.resolve(ScalarNode, "", @implicit).should == 'tag:yaml.org,2002:null'
+    no_warning @br.resolve(ScalarNode, "~", @implicit).should == 'tag:yaml.org,2002:null'
     @br.resolve(ScalarNode, "null", @implicit).should == 'tag:yaml.org,2002:null'
   end
 

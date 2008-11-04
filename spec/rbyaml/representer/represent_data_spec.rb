@@ -7,7 +7,7 @@ describe "Representer#represent_data" do
 
     recursive_seq_node = representer.represent_data(recursive_array)
 
-    recursive_seq_node.class.should == SequenceNode
+    no_warning recursive_seq_node.class.should == SequenceNode
     recursive_seq_node.value[0].should == recursive_seq_node.itself
   end
 
@@ -17,8 +17,8 @@ describe "Representer#represent_data" do
 
     deep_recursive_seq_node = representer.represent_data(deep_recursive_array)
 
-    deep_recursive_seq_node.class.should == SequenceNode
-    deep_recursive_seq_node.value[0].class.should == SequenceNode
+    no_warning deep_recursive_seq_node.class.should == SequenceNode
+    no_warning deep_recursive_seq_node.value[0].class.should == SequenceNode
     deep_recursive_seq_node.value[0].value[0].should == deep_recursive_seq_node.itself
   end
 
@@ -27,8 +27,8 @@ describe "Representer#represent_data" do
     representer = Representer.new(nil)
 
     recursive_map_node = representer.represent_data(recursive_map)
-    recursive_map_node.class.should == MappingNode
-    recursive_map_node.value.keys[0].should == recursive_map_node.itself
+    no_warning recursive_map_node.class.should == MappingNode
+    no_warning recursive_map_node.value.keys[0].should == recursive_map_node.itself
     recursive_map_node.value.values[0].should == recursive_map_node.itself
   end
 
